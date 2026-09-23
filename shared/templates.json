@@ -1,0 +1,945 @@
+{
+  "groups": [
+    {
+      "title": "Finished client sites",
+      "note": "Seventy-one finished business sites, not blank templates, one per local niche. Every one has a chat widget that switches to AI with a free Groq key (steps in AI-CHAT-SETUP.md in each folder), and all but Bean Scene, Summit and Wensley and Hart carry the floating quote form. Change the name, logo and the ten colour tokens and it is ready to hand to a client.",
+      "items": [
+        {
+          "slug": "latchwell-lettings",
+          "name": "Latchwell Lettings",
+          "desc": "Letting agents, Leeds. A fee calculator that shows the VAT and what a landlord actually keeps, a compliance tracker for every certificate, repairs, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F3EE",
+            "#0E6E5C",
+            "#0E6E5C"
+          ]
+        },
+        {
+          "slug": "aldermoor-clinic",
+          "name": "Aldermoor Clinic",
+          "desc": "Physiotherapy and chiropractic, Harrogate. Split hero with three figures, what we treat, three steps, three priced options, advice, FAQ, chat.",
+          "sw": [
+            "#F6F8F7",
+            "#2F6B5E",
+            "#2F6B5E"
+          ]
+        },
+        {
+          "slug": "clearcoat-and-co",
+          "name": "Clearcoat and Co",
+          "desc": "Car body repair, wraps and PPF, Birmingham. A panel map that prices repairs, previews wrap colours and shows film coverage, insurance repairs, recent work, reviews, FAQ, chat.",
+          "sw": [
+            "#F1F2F3",
+            "#111417",
+            "#1D4ED8"
+          ]
+        },
+        {
+          "slug": "ridgeway-roof-care",
+          "name": "Ridgeway Roof Care",
+          "desc": "Roof cleaning and soft washing, Leicester. Growth list of what grows on a roof, two-spring before and after, crew grid, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0F1811",
+            "#CDE04A",
+            "#1C2B1F"
+          ]
+        },
+        {
+          "slug": "flue-and-fell",
+          "name": "Flue and Fell",
+          "desc": "Stoves and chimneys, Kendal. A stove sizing tool that draws the room, a moisture meter pushed into a log, chimney services and prices, stoves fitted, reviews, FAQ, chat.",
+          "sw": [
+            "#F4EFE6",
+            "#2D3A3E",
+            "#A3401A"
+          ]
+        },
+        {
+          "slug": "kirkgate-handyman",
+          "name": "Kirkgate Handyman",
+          "desc": "Handyman, Glasgow. Priced job list, half-day case notes, repeat-booking reasons, crew, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F1F1EE",
+            "#1F3A5F",
+            "#C2721C"
+          ]
+        },
+        {
+          "slug": "tyne-and-needle-tattoo",
+          "name": "Tyne and Needle Tattoo",
+          "desc": "Tattoo studio, Newcastle. A tool that draws the piece to scale on the body and prices the hours and the sittings, the artists, how it works, reviews, FAQ, chat.",
+          "sw": [
+            "#F6F5F3",
+            "#17171A",
+            "#8C2F39"
+          ]
+        },
+        {
+          "slug": "tidewell-cleaning",
+          "name": "Tidewell Cleaning",
+          "desc": "Residential cleaning, Cardiff. Same-pair promise, editable checklist, three-step onboarding, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#FAF7F2",
+            "#2C6B5B",
+            "#C2884A"
+          ]
+        },
+        {
+          "slug": "quietfield-hearing",
+          "name": "Quietfield Hearing",
+          "desc": "Hearing clinic, Nottingham. A two minute hearing check that plays real tones and draws your own audiogram, hearing aid styles, wax removal, reviews, FAQ, chat.",
+          "sw": [
+            "#F3F6F5",
+            "#13606B",
+            "#A24A30"
+          ]
+        },
+        {
+          "slug": "cedarline-fence",
+          "name": "Cedarline Fence and Deck",
+          "desc": "Fences, decks and pergolas, Denver. Photo hero with a review card, about video, four service panels, reasons, crew, FAQ, quote form and chat.",
+          "sw": [
+            "#F7F4EF",
+            "#6E3F22",
+            "#B5752C"
+          ]
+        },
+        {
+          "slug": "warmfold-insulation",
+          "name": "Warmfold Insulation",
+          "desc": "Insulation, Newcastle. A thermal survey you drag across a house, a thermal diagram of where heat escapes, a loft ruler, cavity walls filled in a day, reviews, FAQ, chat.",
+          "sw": [
+            "#F4F2EE",
+            "#2A1454",
+            "#A8361A"
+          ]
+        },
+        {
+          "slug": "crestline-restoration",
+          "name": "Crestline Restoration",
+          "desc": "Water damage and mold, Atlanta. 24 hour photo hero, six services, before and after grid, crew, FAQ, quote form and chat.",
+          "sw": [
+            "#F3F6F8",
+            "#0B5E7E",
+            "#C2410C"
+          ]
+        },
+        {
+          "slug": "wrenfield-vets",
+          "name": "Wrenfield Vets",
+          "desc": "Veterinary practice, Bristol. A health plan builder that prices cover for a dog, cat or rabbit by age, an emergency panel, a first year timeline for puppies and kittens, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F3EE",
+            "#1E4D4A",
+            "#A8452A"
+          ]
+        },
+        {
+          "slug": "pageant-removals",
+          "name": "Pageant Removals",
+          "desc": "Removals and storage, London. Survey-first pricing, four service levels, three-step process, move types, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#FAF8F5",
+            "#7A2B33",
+            "#A8783A"
+          ]
+        },
+        {
+          "slug": "highbough-tree-care",
+          "name": "Highbough Tree Care",
+          "desc": "Tree surgeons, Manchester. A crown diagram showing what each job takes off, a pruning calendar with the nesting season, protected trees, the crew, reviews, FAQ, chat.",
+          "sw": [
+            "#F2F1EA",
+            "#2E5233",
+            "#8A4516"
+          ]
+        },
+        {
+          "slug": "larimer-laundry",
+          "name": "Larimer Laundry",
+          "desc": "Laundromat and wash-dry-fold, Denver CO. Machine sizes, three ways to use it, pickup service, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F7F6F2",
+            "#E4572E",
+            "#2F7FA8"
+          ]
+        },
+        {
+          "slug": "houselight-cinema",
+          "name": "Houselight",
+          "desc": "Home cinema and smart home, Glasgow. A scene keypad that dims the room, and a cinema designer that places every speaker at Dolby's angles and prices the room, reviews, FAQ, chat.",
+          "sw": [
+            "#F2F0EB",
+            "#171614",
+            "#A4520F"
+          ]
+        },
+        {
+          "slug": "mercer-and-vine",
+          "name": "Mercer and Vine",
+          "desc": "Hair salon and barbers, Leeds. Full bleed salon hero, the menu with prices, why people stay, first visit steps, reviews, FAQ, booking band, chat.",
+          "sw": [
+            "#FAF6F2",
+            "#1E1A19",
+            "#A8553C"
+          ]
+        },
+        {
+          "slug": "cabana-row-pools",
+          "name": "Cabana Row Pools",
+          "desc": "Pool builders, Sarasota. A marked up drone shot, a pool designer where the finish sets the water colour, a twelve week build, screen cages and spas, reviews, FAQ, chat.",
+          "sw": [
+            "#F7F3EA",
+            "#0F2A33",
+            "#A8412A"
+          ]
+        },
+        {
+          "slug": "rainline-gutters",
+          "name": "Rainline Gutter Care",
+          "desc": "Gutter cleaning, Birmingham. Full-bleed hero, static trust strip, six card service carousel, glow cards, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0B141C",
+            "#5AD3C4",
+            "#E7EFF4"
+          ]
+        },
+        {
+          "slug": "wensley-and-hart",
+          "name": "Wensley and Hart",
+          "desc": "Funeral directors, Leeds. Quiet by design: the number to call first, what to do depending on where they died, the full price list, ways to say goodbye, chat, and no pop-up form.",
+          "sw": [
+            "#F7F4EF",
+            "#3D3450",
+            "#7B4B5E"
+          ]
+        },
+        {
+          "slug": "trentside-cleaning",
+          "name": "Trentside Exterior Cleaning",
+          "desc": "Pressure washing, Nottingham. Video hero, sticky service stack, before and after comparison, reviews, team, floating quote form and chat.",
+          "sw": [
+            "#0E1114",
+            "#F2B33D",
+            "#F0EDE8"
+          ]
+        },
+        {
+          "slug": "brickmoor-builders",
+          "name": "Brickmoor Builders",
+          "desc": "Builders, Reading. A drawing sheet hero with dimension lines, extension and loft plans you switch between with prices, a 14 week build chart with building control visits, the paperwork, reviews, FAQ, chat.",
+          "sw": [
+            "#F4F1EA",
+            "#1E2226",
+            "#A8461F"
+          ]
+        },
+        {
+          "slug": "bayline-atm",
+          "name": "Bayline ATM",
+          "desc": "ATM placement, Tampa FL. Walkout-cost hook, site benefits, three placement models, small-team panel, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0E1013",
+            "#35D07F",
+            "#1A2B22"
+          ]
+        },
+        {
+          "slug": "coppice-garden-rooms",
+          "name": "Coppice Garden Rooms",
+          "desc": "Garden rooms, Nottingham. A garden planner drawn to scale with four room sizes and prices, the wall build up, uses, the install day by day, reviews, FAQ, chat.",
+          "sw": [
+            "#F2F1EA",
+            "#2F4A36",
+            "#7A4A2B"
+          ]
+        },
+        {
+          "slug": "northwind-snow",
+          "name": "Northwind Snow",
+          "desc": "Snow removal, Minneapolis MN. Driveway and lot tiers, storm-route explainer, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0B1520",
+            "#F26D21",
+            "#16283A"
+          ]
+        },
+        {
+          "slug": "square-knot-martial-arts",
+          "name": "Square Knot Martial Arts",
+          "desc": "Family martial arts, Austin. A belt ladder that dates every belt from today at your pace, a timetable you book a free trial from, programmes and fees, reviews, FAQ, chat.",
+          "sw": [
+            "#F7F5F0",
+            "#16181A",
+            "#8A6212"
+          ]
+        },
+        {
+          "slug": "shadewright-tint",
+          "name": "Shadewright Tint",
+          "desc": "Window tinting, Las Vegas. Full bleed studio hero, statement with two photos, four priced films, review, FAQ, booking band, chat.",
+          "sw": [
+            "#F1F1EF",
+            "#121314",
+            "#B45309"
+          ]
+        },
+        {
+          "slug": "parterre-and-co",
+          "name": "Parterre and Co",
+          "desc": "Garden design, London. A numbered designer's plan with a real or artificial lawn, three grass samples and the base beneath, how it works, recent gardens, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F2EA",
+            "#33452F",
+            "#9E4426"
+          ]
+        },
+        {
+          "slug": "kestrel-autos",
+          "name": "Kestrel Autos",
+          "desc": "Independent garage, Bristol. Workshop video hero with a number plate you type your reg into, and the prices on a mechanic's job card pinned to the tool wall.",
+          "sw": [
+            "#EDEBE6",
+            "#C8102E",
+            "#F6CD1B"
+          ]
+        },
+        {
+          "slug": "tollgate-motors",
+          "name": "Tollgate Motors",
+          "desc": "Used cars, Birmingham. A filterable pitch list with monthly figures, and a finance calculator with the representative example spelled out, how we prep cars, reviews, FAQ, chat.",
+          "sw": [
+            "#F4F5F6",
+            "#0F4C8C",
+            "#0F4C8C"
+          ]
+        },
+        {
+          "slug": "lindfield-kitchens",
+          "name": "Lindfield Kitchens and Bathrooms",
+          "desc": "Kitchens and bathrooms, London. Video hero, six priced room cards, five promises, a seven stage fitting timeline, quote form and chat.",
+          "sw": [
+            "#F4F0EA",
+            "#3D4A3A",
+            "#8A6A38"
+          ]
+        },
+        {
+          "slug": "larkhollow-farm",
+          "name": "Larkhollow Farm",
+          "desc": "Barn wedding venue, Nashville. A to scale floor plan that lays out tables and the dance floor by guest count and prices the date by season, five spaces, what is included, reviews, FAQ, chat.",
+          "sw": [
+            "#FBF7F1",
+            "#5E2230",
+            "#95562A"
+          ]
+        },
+        {
+          "slug": "cactus-pool-co",
+          "name": "Cactus Pool Co",
+          "desc": "Pool cleaning, Phoenix AZ. Three-factor explainer, year-with-us plan, published prices, reviews, notes from the truck, FAQ, floating quote form and chat.",
+          "sw": [
+            "#FBF7F1",
+            "#0E7C9B",
+            "#D2683C"
+          ]
+        },
+        {
+          "slug": "mullion-and-sill",
+          "name": "Mullion and Sill",
+          "desc": "Windows and doors, Cardiff. A front door configurator in six colours and three styles, a window energy label, conservatories, fitting day, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F4F0",
+            "#2E3438",
+            "#1D5C61"
+          ]
+        },
+        {
+          "slug": "tallgrass-towing",
+          "name": "Tallgrass Towing",
+          "desc": "Towing, Oklahoma City. The phone number on a green highway sign, interstate shields for the service area, mile marker figures and a road running under the steps.",
+          "sw": [
+            "#EFEEEA",
+            "#0B6B3A",
+            "#FFB400"
+          ]
+        },
+        {
+          "slug": "gloss-and-grit",
+          "name": "Gloss and Grit",
+          "desc": "Garage floors, San Antonio. A floor lab that draws a garage in the flake blend you pick, how it differs from a box kit, install day on a clock, reviews, FAQ, chat.",
+          "sw": [
+            "#F3F1EC",
+            "#16181B",
+            "#A8341B"
+          ]
+        },
+        {
+          "slug": "bean-scene",
+          "name": "Bean Scene",
+          "desc": "Coffee roastery, Leeds. Fit-to-width wordmark, live opening hours, filter menu, cursor trail, table booking and a chat widget, no pop-up form.",
+          "sw": [
+            "#100C0A",
+            "#C9752F",
+            "#F1E9DD"
+          ]
+        },
+        {
+          "slug": "evenwatch-security",
+          "name": "Evenwatch Security",
+          "desc": "Home security, Indianapolis. The app on a phone over a house at dusk, a coverage plan that draws each package's cameras, the first three minutes after an alarm, reviews, FAQ, chat.",
+          "sw": [
+            "#EEF1F4",
+            "#13233A",
+            "#A34F16"
+          ]
+        },
+        {
+          "slug": "bramble-paws",
+          "name": "Bramble Paws",
+          "desc": "Dog grooming, Sheffield. Sticker-scatter hero, service bento, recent-grooms grid, parallax band, floating quote form and chat.",
+          "sw": [
+            "#FBF5EF",
+            "#7A3B57",
+            "#B4604A"
+          ]
+        },
+        {
+          "slug": "landing-and-rail",
+          "name": "Landing and Rail",
+          "desc": "Stairlifts and bathrooms, Leicester. Large type for older readers, a stair checker that draws the staircase and prices the rail, help with the cost, fitting day, reviews, FAQ, chat.",
+          "sw": [
+            "#F6F2EA",
+            "#1F5C57",
+            "#9A4712"
+          ]
+        },
+        {
+          "slug": "daylight-window-co",
+          "name": "Daylight Window Co.",
+          "desc": "Window cleaning, Bristol. Split hero with a stat row, service cards, three long steps, published prices, tips, floating quote form and chat.",
+          "sw": [
+            "#F7F9FA",
+            "#0B6E99",
+            "#9FD3E8"
+          ]
+        },
+        {
+          "slug": "ashlar-and-oak",
+          "name": "Ashlar and Oak",
+          "desc": "Fitted wardrobes and joinery, Edinburgh. A wardrobe designer with three bays, finishes and live pricing, scribing explained, the workshop, reviews, FAQ, chat.",
+          "sw": [
+            "#F4F0E8",
+            "#2C4A3B",
+            "#B8864E"
+          ]
+        },
+        {
+          "slug": "lumenfield-electrical",
+          "name": "Lumenfield Electrical",
+          "desc": "Electrician, Manchester. Plaster white with the brown, blue and green and yellow of UK cable as the only colour, and the price list set out as a fuse board circuit chart.",
+          "sw": [
+            "#F4F2ED",
+            "#14161A",
+            "#2456A6"
+          ]
+        },
+        {
+          "slug": "board-and-gild-signs",
+          "name": "Board and Gild Signs",
+          "desc": "Sign makers, Sheffield. Type your name onto a shop front in four kinds of sign, by day or lit at night, priced by the metre, what we make, how it works, reviews, FAQ, chat.",
+          "sw": [
+            "#F7F4EC",
+            "#17492F",
+            "#8A6A16"
+          ]
+        },
+        {
+          "slug": "vellum-decorating",
+          "name": "Vellum Decorating",
+          "desc": "Painting and decorating, Liverpool. Three job types, big statement block, prep-paint-put-back steps, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F4F1EC",
+            "#2E5E4E",
+            "#C2703F"
+          ]
+        },
+        {
+          "slug": "margin-tuition",
+          "name": "Margin Tuition",
+          "desc": "Tutoring centre, Leicester. A grade planner that draws the path from the grade now to the target with the mocks along the way, prices, how it works, reviews, FAQ, chat.",
+          "sw": [
+            "#FBFAF6",
+            "#B23A2E",
+            "#B23A2E"
+          ]
+        },
+        {
+          "slug": "latchkey-locksmiths",
+          "name": "Latchkey Locksmiths",
+          "desc": "Locksmith, Birmingham. Navy and brass, the live Birmingham time in a key tag, prices hung on key tags from a rail, a 2am callout minute by minute.",
+          "sw": [
+            "#F6F2EA",
+            "#13223A",
+            "#C29A4B"
+          ]
+        },
+        {
+          "slug": "longhand-insurance",
+          "name": "Longhand Insurance Brokers",
+          "desc": "Business insurance brokers, Manchester. A cover builder that sorts policies into what the law says, what you will want and what is worth a look, with a guide price, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F2EA",
+            "#22408A",
+            "#22408A"
+          ]
+        },
+        {
+          "slug": "arkwright-facilities",
+          "name": "Arkwright Facilities",
+          "desc": "Commercial cleaning, Leeds. Three site problems, directly-employed argument, four contract types, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0F1115",
+            "#3F8EFC",
+            "#1B2029"
+          ]
+        },
+        {
+          "slug": "plumbline-weight-care",
+          "name": "Plumbline Weight Care",
+          "desc": "Medical weight loss, Charlotte. A BMI gauge that shows a healthy range and says plainly when medicine is usually considered, monthly body scans, three programmes, reviews, FAQ, chat.",
+          "sw": [
+            "#F6F3EE",
+            "#6D2A50",
+            "#8E3A64"
+          ]
+        },
+        {
+          "slug": "fernhill-lawn-care",
+          "name": "Fernhill Lawn Care",
+          "desc": "Lawn care and landscaping, Reading. Video hero, treatment plans, five-point standard, season-by-season journey, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F6F4EC",
+            "#3E7B3A",
+            "#C4A23C"
+          ]
+        },
+        {
+          "slug": "courseline-siding",
+          "name": "Courseline Siding",
+          "desc": "Siding contractor, Minneapolis. A visualiser that tries lap, Dutch lap, board and batten or shake on the house and prices it by the square, materials compared, storm damage, reviews, FAQ, chat.",
+          "sw": [
+            "#F5F4F0",
+            "#B8431A",
+            "#B8431A"
+          ]
+        },
+        {
+          "slug": "briarwood-pest",
+          "name": "Briarwood Pest Control",
+          "desc": "Pest control, Houston. Photo hero with three figures, three priced plans, statement band, two method panels, reviews, quote form and chat.",
+          "sw": [
+            "#F7F5EF",
+            "#1F5A3A",
+            "#B06A12"
+          ]
+        },
+        {
+          "slug": "setright-foundations",
+          "name": "Setright Foundation Repair",
+          "desc": "Foundation repair, Kansas City. A floor elevation survey before and after piers, a crack reader, a pier driven through the clay to rock, waterproofing, reviews, FAQ, chat.",
+          "sw": [
+            "#F2F0EB",
+            "#22384A",
+            "#A33A1F"
+          ]
+        },
+        {
+          "slug": "stoneway-driveways",
+          "name": "Stoneway Driveways",
+          "desc": "Driveways and patios, Sheffield. Four photo collage hero, four surfaces, a three step build, six driveway types, reviews, site visit band, chat.",
+          "sw": [
+            "#F5F4F1",
+            "#2F4858",
+            "#9A6A2F"
+          ]
+        },
+        {
+          "slug": "lonestar-shine",
+          "name": "Lone Star Shine",
+          "desc": "Car wash, Austin TX. Four wash tiers, no-scratch explainer, forty-second walkthrough, unlimited pass, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F2F4F6",
+            "#0C6DBF",
+            "#E8590C"
+          ]
+        },
+        {
+          "slug": "kerbside-clearance",
+          "name": "Kerbside Clearance",
+          "desc": "Junk removal, Manchester. Video statement, numbered service panels, team grid, FAQ, floating quote form and chat.",
+          "sw": [
+            "#f6f7f9",
+            "#0f766e",
+            "#f59e0b"
+          ]
+        },
+        {
+          "slug": "capitol-signing",
+          "name": "Capitol Signing",
+          "desc": "Mobile notary and loan signing, Sacramento CA. Document wall, metric band, four-step process, escrow reviews, three fee tiers, eight-question FAQ, floating quote form and chat.",
+          "sw": [
+            "#F6F5F1",
+            "#16233A",
+            "#8A6A24"
+          ]
+        },
+        {
+          "slug": "hollow-creek-septic",
+          "name": "Hollow Creek Septic",
+          "desc": "Septic services, Knoxville. A tank that fills as you set the household and the years, what never goes down the drain, straight prices, reviews, FAQ, chat.",
+          "sw": [
+            "#F4F1E8",
+            "#1F4E5A",
+            "#9C4221"
+          ]
+        },
+        {
+          "slug": "castlegate-roofing",
+          "name": "Castlegate Roofing",
+          "desc": "Roofing, Sheffield. Service carousel, reason stack, process steps, star reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#f8f6f3",
+            "#b93d1c",
+            "#ee8a5f"
+          ]
+        },
+        {
+          "slug": "ashgrove-detailing",
+          "name": "Ashgrove Detailing",
+          "desc": "Mobile car detailing, Edinburgh. Package tiers, van-beats-a-unit argument, crew, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#0D0F14",
+            "#C8D3DE",
+            "#1A1F27"
+          ]
+        },
+        {
+          "slug": "ironside-kitchen",
+          "name": "Ironside Kitchen",
+          "desc": "Food truck and catering, Portland OR. Video hero with floating dish cards, cursor-trail band, filterable twelve-item menu, catering cards, FAQ-free contact card, floating quote form and chat.",
+          "sw": [
+            "#14110F",
+            "#D2451A",
+            "#E8A33D"
+          ]
+        },
+        {
+          "slug": "solvane-solar",
+          "name": "Solvane Solar",
+          "desc": "Solar, Phoenix. Golden hour saguaro hero, and a slider that redraws the customer's own electric bill and system size as they move it.",
+          "sw": [
+            "#F7EFE3",
+            "#B5431D",
+            "#F2A93B"
+          ]
+        },
+        {
+          "slug": "lathwell-shutters",
+          "name": "Lathwell Shutters",
+          "desc": "Shutters and blinds, Liverpool. A window designer that tilts the louvres and prices the shutter fitted, blinds for every other window, how it works, reviews, FAQ, chat.",
+          "sw": [
+            "#F7F4EE",
+            "#2F3B34",
+            "#8A5A33"
+          ]
+        },
+        {
+          "slug": "grain-and-tile",
+          "name": "Grain and Tile Flooring",
+          "desc": "Flooring, Nashville. Pick a sample chip and the room photo changes floor. Prices hang on a kraft sample board with punched swatches.",
+          "sw": [
+            "#FBF7F0",
+            "#3B2417",
+            "#C9A56B"
+          ]
+        },
+        {
+          "slug": "queen-city-storage",
+          "name": "Queen City Storage",
+          "desc": "Self storage, Charlotte NC. Three unit sizes with prices, what is included, gate team, reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#101418",
+            "#E2B33C",
+            "#1C232B"
+          ]
+        },
+        {
+          "slug": "cantor-garage-doors",
+          "name": "Cantor Garage Doors",
+          "desc": "Garage doors, Dallas. Five photo collage hero, about split, three priced door styles, four feature tiles, crew, figures, reviews, quote form and chat.",
+          "sw": [
+            "#F2F4F6",
+            "#23282E",
+            "#C2410C"
+          ]
+        },
+        {
+          "slug": "clutch-and-mirror",
+          "name": "Clutch and Mirror",
+          "desc": "Driving school, Raleigh. Split hero, three teaching points, learning figures, three steps to test day, three packages, parent review, FAQ, tips, chat.",
+          "sw": [
+            "#F6F7F3",
+            "#1A6B45",
+            "#9A5B13"
+          ]
+        },
+        {
+          "slug": "midstate-vending",
+          "name": "Midstate Vending",
+          "desc": "Vending machines, Columbus OH. Four machine setups sized by headcount, restock argument, facilities-manager reviews, FAQ, floating quote form and chat.",
+          "sw": [
+            "#F3F4F7",
+            "#2242C7",
+            "#8494D8"
+          ]
+        },
+        {
+          "slug": "summit-roofing",
+          "name": "Summit Roofing Co.",
+          "desc": "Roofing, Asheville NC. Multi-page React build: owner story, project gallery, financing, blog, FAQ, AI chat. Deploys at its own root.",
+          "sw": [
+            "#0f172a",
+            "#e8821e",
+            "#f5f7fa"
+          ],
+          "href": "https://summit-roofing-site.vercel.app/"
+        }
+      ]
+    },
+    {
+      "title": "Local service businesses",
+      "note": "The niches AIPM students sell to first",
+      "items": [
+        {
+          "slug": "hvac-management",
+          "name": "HVAC Management",
+          "desc": "Full-bleed hero, service carousel, sticky reason stack, process steps, FAQ.",
+          "sw": [
+            "#f8fafc",
+            "#1d4ed8",
+            "#e0e7ff"
+          ]
+        },
+        {
+          "slug": "plumbing-services",
+          "name": "Plumbing Services",
+          "desc": "Centred hero with trust marquee, glow stat cards, contact form.",
+          "sw": [
+            "#020617",
+            "#0ea5e9",
+            "#f8fafc"
+          ]
+        },
+        {
+          "slug": "landscaping-services",
+          "name": "Landscaping Services",
+          "desc": "Video statement, four oversized numbered service panels, team grid.",
+          "sw": [
+            "#f7f9f4",
+            "#2d5a27",
+            "#8fbc8f"
+          ]
+        },
+        {
+          "slug": "dental-practice",
+          "name": "Dental Practice",
+          "desc": "Split hero with floating stat chips, priced service cards, review marquee.",
+          "sw": [
+            "#f7f6f7",
+            "#0798ff",
+            "#e8f4ff"
+          ]
+        },
+        {
+          "slug": "med-spa",
+          "name": "Med Spa",
+          "desc": "Blush hero with trust marquee, treatment grid, before-and-after marquee.",
+          "sw": [
+            "#fdf8f8",
+            "#d5799b",
+            "#feeaee"
+          ]
+        },
+        {
+          "slug": "auto-detailing",
+          "name": "Auto Detailing",
+          "desc": "Video hero, sticky service stack, comparison table, video contact band.",
+          "sw": [
+            "#0a0a0a",
+            "#ff7a1a",
+            "#1a1a1a"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hospitality and food",
+      "note": "Warm, image-heavy, walk-in driven",
+      "items": [
+        {
+          "slug": "coffee-shop",
+          "name": "Coffee Shop",
+          "desc": "Handwritten display face, cursor image trail, filterable menu.",
+          "sw": [
+            "#f5f0e8",
+            "#2c1810",
+            "#ede7db"
+          ]
+        },
+        {
+          "slug": "boutique-hotel",
+          "name": "Boutique Hotel",
+          "desc": "Dark editorial with room gallery and video.",
+          "sw": [
+            "#0f1010",
+            "#ffffff",
+            "#2a2a28"
+          ]
+        },
+        {
+          "slug": "travel-agency",
+          "name": "Travel Agency",
+          "desc": "Warm rose and sand. Destination-led itineraries.",
+          "sw": [
+            "#f6f0e9",
+            "#3d1f2a",
+            "#8c4a5c"
+          ]
+        },
+        {
+          "slug": "wellness-center",
+          "name": "Wellness Center",
+          "desc": "Warm terracotta, class timetable, practitioner led.",
+          "sw": [
+            "#fafaf9",
+            "#ea6720",
+            "#f5ede6"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Online and tech",
+      "note": "For the online side of the offer",
+      "items": [
+        {
+          "slug": "web-agency",
+          "name": "Web Agency",
+          "desc": "Vertical marquee hero, bento services, work carousel.",
+          "sw": [
+            "#0a0a0a",
+            "#f0f0f0",
+            "#434343"
+          ]
+        },
+        {
+          "slug": "ai-consulting",
+          "name": "AI Consulting",
+          "desc": "Black with mint. Large-radius cards, dark systems feel.",
+          "sw": [
+            "#0a0a0a",
+            "#00ffab",
+            "#111111"
+          ]
+        },
+        {
+          "slug": "ai-email-platform",
+          "name": "AI Email Platform",
+          "desc": "SaaS layout with feature blocks, pricing table, testimonials.",
+          "sw": [
+            "#f8fafc",
+            "#106feb",
+            "#b4d4f8"
+          ]
+        },
+        {
+          "slug": "real-estate-agency",
+          "name": "Real Estate Agency",
+          "desc": "Listings grid, agent cards, enquiry flow.",
+          "sw": [
+            "#f0f0f0",
+            "#1a1a1a",
+            "#c9c9c9"
+          ]
+        },
+        {
+          "slug": "ai-ugc-creator",
+          "name": "AI UGC Creator",
+          "desc": "Heaviest video use: six clips, thirty images.",
+          "sw": [
+            "snow",
+            "#e63946",
+            "#1d1d1d"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Creator and product",
+      "note": "Portfolio, publishing, product launches, and beauty brands",
+      "items": [
+        {
+          "slug": "creative-portfolio",
+          "name": "Creative Portfolio",
+          "desc": "Tight radius, white space, project-first.",
+          "sw": [
+            "#ffffff",
+            "#171717",
+            "#e5e5e5"
+          ]
+        },
+        {
+          "slug": "personal-blogger",
+          "name": "Personal Blogger",
+          "desc": "Editorial paper tone, image-led posts.",
+          "sw": [
+            "#f5f3f0",
+            "#1a1a1a",
+            "#d8d2c8"
+          ]
+        },
+        {
+          "slug": "product-showcase",
+          "name": "Product Showcase",
+          "desc": "Single-product launch page, spec blocks, gallery.",
+          "sw": [
+            "#f1f1f1",
+            "#1a1a1a",
+            "#b8b8b8"
+          ]
+        },
+        {
+          "slug": "perfume-brand",
+          "name": "Perfume Brand",
+          "desc": "Oxblood collage hero, priced bottles, numbered craft steps, creator video wall.",
+          "sw": [
+            "#f5f5f5",
+            "#511f1f",
+            "#c9725c"
+          ]
+        },
+        {
+          "slug": "natural-skincare",
+          "name": "Natural Skincare",
+          "desc": "Warm cream and clay. Statement hero, product trio, stat marquee, FAQ split.",
+          "sw": [
+            "#fcf6ec",
+            "#2e2521",
+            "#b89461"
+          ]
+        }
+      ]
+    }
+  ]
+}

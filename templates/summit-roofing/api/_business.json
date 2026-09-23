@@ -1,0 +1,26 @@
+{
+  "knowledge": "About the business: Local Asheville roofing contractor. Licensed, family-owned, insurance-claim experts.\nOwner story: Dale Whitfield started Summit Roofing after eighteen years of watching homeowners get burned by storm chasers who blow into town, slap on a roof, and disappear. He built Summit to be the opposite: local, accountable, and on the roof himself for every estimate. That means when you call Summit, you are talking to the person whose name is on the truck. No call center, no high-pressure script, no surprise line items. Just an honest read on your roof and a crew that treats your home like their own.\nOwner: Dale Whitfield (Founder & CEO, 18 YEARS OF EXPERIENCE)\nService, Roof Replacement: Full tear-off and replacement with architectural shingles built for mountain weather. One crew, start to finish.\nService, Storm & Hail Repair: Fast response after the storm. We tarp, document for insurance, and restore your roof to better than it was.\nService, Roof Repair: Leaks, missing shingles, flashing failures. We find the real cause and fix it, not just patch the symptom.\nService, Inspections & Maintenance: Free, honest inspections with photos. Annual maintenance that adds years to the roof you already have.\nQ: How much does a new roof cost in Asheville? A: Most homes land between $9,000 and $18,000 depending on size, pitch, and material. We give you one honest number after we actually look, never a guess from the driveway.\nQ: Do you handle insurance claims? A: Yes. We meet your adjuster on the roof, document everything the right way, and make sure the scope reflects the real damage. Most of our storm jobs are insurance-covered.\nQ: How long does a roof replacement take? A: Most homes are a one to two day job. We tear off, dry it in, and finish without leaving your roof exposed overnight.\nQ: Are you licensed and insured? A: Fully. North Carolina roofing license NC-RC-48217, plus general liability and workers comp. We will hand you the certificates before we start.\nQ: What if I do not actually need a new roof? A: Then we will tell you. Plenty of our inspections end with us saying your roof has good years left. We would rather earn the job later than sell you something you do not need.\nOffers note: Offer good through the end of the month for Asheville-area homeowners.\nAddress: 44 Roberts Street, Asheville, NC 28801\nEmail: office@summitroofingavl.com",
+  "name": "Summit Roofing Co.",
+  "assistantName": "Alex",
+  "trade": "",
+  "serviceRegion": "Greater Asheville",
+  "description": "Local Asheville roofing contractor. Licensed, family-owned, insurance-claim experts.",
+  "phone": "(828) 555-0142",
+  "services": [
+    "Roof Replacement",
+    "Storm & Hail Repair",
+    "Roof Repair",
+    "Inspections & Maintenance"
+  ],
+  "serviceAreas": [
+    "ASHEVILLE",
+    "HENDERSONVILLE",
+    "BLACK MOUNTAIN",
+    "WEAVERVILLE",
+    "ARDEN",
+    "FLETCHER",
+    "CANDLER",
+    "FAIRVIEW"
+  ],
+  "hours": "{'label': 'Mon to Fri', 'value': '7:00 AM to 6:00 PM'}; {'label': 'Saturday', 'value': '8:00 AM to 2:00 PM'}"
+}

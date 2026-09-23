@@ -1,0 +1,847 @@
+/* ==========================================================================
+   BEAN SCENE
+   Midnight roast: espresso-black ground, bone type, burnt amber signal.
+   Condensed caps display, 6px corners, dotted menu leaders, film grain.
+   Overrides the core token contract, then styles what is unique to this site.
+   ========================================================================== */
+
+:root {
+  --background: #100C0A;
+  --card: #1E1714;
+  --foreground: #F1E9DD;
+  --primary-cta: #C9752F;
+  --primary-cta-text: #17110B;
+  --secondary-cta: #221B16;
+  --secondary-cta-text: #F1E9DD;
+  --accent: #E0964B;
+  --background-accent: #8A4A16;
+  --radius: 6px;
+
+  --content-width: clamp(40rem, 90vw, 84rem);
+  --font-body: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Gambarino', 'Hoefler Text', Georgia, serif;
+  --section-head-size: var(--text-7xl);
+
+  /* Motion. Real mass, no ease-in-out. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --hairline: color-mix(in srgb, var(--foreground) 12%, transparent);
+  --ink-soft: color-mix(in srgb, var(--foreground) 66%, transparent);
+  --ink-faint: color-mix(in srgb, var(--foreground) 42%, transparent);
+}
+
+@media (width <= 768px) {
+  :root { --content-width: 88vw; --section-head-size: var(--text-6xl); }
+
+  /* This theme sets a tighter chip than core, which would drop the filter
+     buttons under the 44px minimum tap target on a phone. */
+  .filter { height: 2.75rem; }
+}
+
+/* Gambarino ships one weight. Asking for the core's 600 makes the browser
+   fake a bold and the serifs go muddy, so display elements state 400. A serif
+   also wants tighter fitting than the condensed caps this replaced. */
+h1, h2, h3, h4, .display {
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+body { letter-spacing: 0.005em; }
+
+::selection { background: var(--primary-cta); color: var(--primary-cta-text); }
+
+/* --- Film grain -----------------------------------------------------------
+   Fixed layer, never attached to anything that scrolls, or the GPU repaints
+   the texture on every frame. */
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* --- Dark surfaces ---------------------------------------------------------
+   The core card is built for light pages: its border is the fill colour and
+   its shadow is a 10% black that vanishes on an espresso background. Here the
+   lift comes from a hairline plus an inset top highlight instead. */
+
+.card {
+  border-color: var(--hairline);
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--card) 94%, transparent),
+    color-mix(in srgb, var(--card) 64%, transparent)
+  );
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--foreground) 9%, transparent),
+    0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.shadow-xl {
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--foreground) 9%, transparent),
+    0 24px 50px -22px rgba(0, 0, 0, 0.9),
+    0 8px 18px -12px rgba(0, 0, 0, 0.7);
+}
+
+.ambient span { background: color-mix(in srgb, var(--background-accent) 26%, transparent); }
+.ambient .b3 { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+
+.eyebrow {
+  padding: 0.35rem 0.85rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-head h2 {
+  background: linear-gradient(104deg, var(--foreground) 42%, var(--accent) 96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+}
+
+.section-head > p { color: var(--ink-soft); }
+
+/* --- Buttons ---------------------------------------------------------------
+   The core hover scales and tilts the whole button. That reads playful, which
+   is the wrong register here, so it is replaced with a lift and a press. */
+
+.btn {
+  height: 2.875rem;
+  padding-inline: 1.75rem;
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform 0.4s var(--ease-soft), box-shadow 0.4s var(--ease-soft);
+}
+
+@media (hover: hover) and (width >= 768px) {
+  .btn:hover { transform: translateY(-2px); }
+  .btn:hover .ltr { transform: translateY(-1.25em) rotate(0); }
+  .btn:active { transform: translateY(0) scale(0.985); }
+}
+
+.secondary-button {
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--foreground) 22%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+/* --- Nav ------------------------------------------------------------------- */
+
+.navbar__bar {
+  padding: 0.55rem 0.55rem 0.55rem 1.4rem;
+  border-radius: var(--radius);
+  transition: background 0.5s var(--ease-soft), border-color 0.5s var(--ease-soft);
+}
+
+.navbar__brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+.navbar__links a {
+  font-size: var(--text-sm);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.navbar__links a:hover { color: var(--foreground); opacity: 1; }
+
+/* Full-screen menu on phones: the core paints it in --primary-cta, which
+   would be a wall of amber. */
+.navbar__panel {
+  background: color-mix(in srgb, #0A0706 92%, transparent);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+}
+
+.navbar__panel a {
+  font-family: var(--font-heading);
+  font-size: var(--text-8xl);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: var(--foreground);
+}
+
+.navbar__panel a:hover { color: var(--accent); }
+html body.nav-open .navbar .navbar__brand { color: var(--foreground); }
+
+html body.nav-open .navbar .navbar__toggle,
+html body.nav-open .navbar .navbar__actions .btn {
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--foreground) 28%, transparent);
+}
+
+/* --- Hero -------------------------------------------------------------------
+   Full-bleed footage with the page's own ground fading up over it, so the
+   video ends and the site begins without a seam. */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100svh;
+  padding-block: 9rem 2.75rem;
+  overflow: hidden;
+}
+
+.hero__media { position: absolute; inset: 0; z-index: 0; }
+
+.hero__media video,
+.hero__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+}
+
+.hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+      var(--background) 2%,
+      color-mix(in srgb, var(--background) 88%, transparent) 30%,
+      color-mix(in srgb, var(--background) 52%, transparent) 72%,
+      color-mix(in srgb, var(--background) 72%, transparent) 100%),
+    linear-gradient(to right,
+      color-mix(in srgb, var(--background) 60%, transparent),
+      transparent 55%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero__title {
+  width: 100%;
+  white-space: nowrap;
+  line-height: 0.86;
+  letter-spacing: -0.015em;
+  font-size: var(--text-9xl); /* core.js refines this to span the column exactly */
+}
+
+.hero__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.hero__lede {
+  max-width: 34ch;
+  padding-top: 1.25rem;
+  font-size: var(--text-xl);
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+/* Price chips over the footage. Two nested enclosures: outer shell holds the
+   hairline, inner core holds the picture. */
+.chips { display: flex; gap: 0.6rem; }
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0.9rem 0.5rem 0.5rem;
+}
+
+.chip img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+.chip__name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.chip__price { font-size: var(--text-sm); color: var(--accent); }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.status::before {
+  content: '';
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent);
+  animation: status-pulse 2.6s var(--ease-out) infinite;
+}
+
+.status[data-open='false']::before { background: var(--ink-faint); animation: none; }
+
+@keyframes status-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 0.6rem transparent; }
+}
+
+@media (width <= 900px) {
+  .hero { padding-block: 7.5rem 2rem; }
+  .hero__top { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero__foot { flex-direction: column; align-items: stretch; gap: 1.25rem; }
+  .hero__lede { max-width: none; font-size: var(--text-lg); padding-top: 1rem; }
+  .chips { width: 100%; }
+  .chip { flex: 1; }
+}
+
+/* --- Roast list --------------------------------------------------------------
+   The bag on the shelf this week: origin, process, notes, price. */
+
+.roast-section { padding-block: 6.5rem 5rem; }
+.roast-section .section-head { margin-bottom: 3rem; }
+
+.roast-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  transition: transform 0.6s var(--ease-soft), border-color 0.6s var(--ease-soft);
+}
+
+.roast-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+
+.roast-card__media { position: relative; overflow: hidden; border-radius: calc(var(--radius) - 3px); }
+
+.roast-card__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-soft);
+}
+
+.roast-card:hover .roast-card__media img { transform: scale(1.05); }
+
+.roast-card__index {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: calc(var(--radius) - 3px);
+  background: color-mix(in srgb, #0A0706 72%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+
+.roast-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 0.85rem 0.85rem;
+}
+
+.roast-card__body h3 {
+  font-size: var(--text-4xl);
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
+
+.roast-card__meta {
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.notes { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.notes li {
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--hairline);
+  border-radius: calc(var(--radius) - 3px);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.roast-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.35rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.roast-card__price strong {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.roast-card__price span { font-size: var(--text-sm); color: var(--ink-faint); }
+
+/* --- Menu --------------------------------------------------------------------
+   Built like a printed board: picture, then a dotted leader running from the
+   name to the price. */
+
+.menu-section { padding-block: 5rem; }
+.menu-section__inner { display: flex; flex-direction: column; gap: 2.75rem; }
+
+.filter {
+  height: 2.625rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-color: var(--hairline);
+}
+
+.item { padding: 0.5rem; }
+
+.item__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+/* Every shot arrives with its own white balance. One grade and a vignette
+   pull the studio whites back to the warmth of the page. */
+.item__media img,
+.roast-card__media img,
+.hire-card img,
+.hire-wide img,
+.story-media img,
+.chip img {
+  filter: saturate(0.9) contrast(1.03) sepia(0.08) brightness(0.94);
+}
+
+.item__media::after,
+.roast-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, color-mix(in srgb, var(--background) 42%, transparent), transparent 42%),
+    radial-gradient(120% 100% at 50% 40%, transparent 45%, color-mix(in srgb, var(--background) 34%, transparent) 100%);
+}
+
+.item__media img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-soft);
+}
+
+.item:hover .item__media img { transform: scale(1.06); }
+
+.item__body { padding: 0.9rem 0.6rem 0.4rem; }
+
+.item__line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.item__line h4 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+}
+
+.item__leader {
+  flex: 1;
+  height: 0.6em;
+  border-bottom: 1px dotted color-mix(in srgb, var(--foreground) 28%, transparent);
+}
+
+.item__price {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.item__note {
+  margin-top: 0.15rem;
+  font-size: var(--text-sm);
+  line-height: 1.35;
+  color: var(--ink-faint);
+}
+
+/* --- Cursor trail -------------------------------------------------------------- */
+
+.trail-section { position: relative; padding-block: 12rem; }
+
+.trail-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.trail-layer figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14rem;
+  height: 18rem;
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.trail-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.46) saturate(0.82) sepia(0.12) contrast(1.05);
+}
+
+.trail-section__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.trail-section__content h2 {
+  max-width: 16ch;
+  font-size: var(--text-8xl);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.trail-section__content h2 em { font-style: normal; color: var(--accent); }
+.trail-section__actions { pointer-events: auto; display: flex; gap: 0.6rem; margin-top: 0.75rem; }
+
+@media (width <= 768px) {
+  .trail-section { padding-block: 6rem; }
+  .trail-layer { display: none; }
+}
+
+/* --- Story ---------------------------------------------------------------------- */
+
+.story-section { padding-block: 5rem; }
+
+.story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.story-media { padding: 0.5rem; }
+
+.story-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+.story-copy { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.story-copy h2 {
+  font-size: var(--text-6xl);
+  line-height: 1.02;
+}
+
+.story-copy > p { max-width: 52ch; font-size: var(--text-lg); line-height: 1.55; color: var(--ink-soft); }
+
+.stat-list__item + .stat-list__item { border-top-color: var(--hairline); }
+
+.stat-list__item h3 {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.005em;
+}
+
+.stat-list__item p { color: var(--ink-soft); font-size: var(--text-base); }
+
+.stat-list__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.85rem;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.stat-list__icon svg { width: 1rem; height: 1rem; }
+
+@media (width <= 900px) {
+  .story-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .story-media img { aspect-ratio: 4 / 3; }
+}
+
+/* --- Hire ------------------------------------------------------------------------ */
+
+.hire-section { padding-block: 5rem; }
+.hire-section .section-head { margin-bottom: 2.5rem; }
+
+.hire-card { padding: 0.5rem; }
+
+.hire-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+.hire-card__body { display: flex; flex-direction: column; gap: 0.6rem; padding: 1.25rem 0.85rem 0.85rem; }
+
+.hire-card__body h3 { font-size: var(--text-4xl); letter-spacing: -0.005em; }
+.hire-card__body p { font-size: var(--text-base); line-height: 1.5; color: var(--ink-soft); }
+
+.hire-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: stretch;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.hire-wide__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 2.5rem 2rem;
+}
+
+.hire-wide__copy h3 { font-size: var(--text-5xl); line-height: 1.02; }
+.hire-wide__copy p { max-width: 42ch; font-size: var(--text-lg); line-height: 1.5; color: var(--ink-soft); }
+
+.hire-wide img {
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+@media (width <= 768px) {
+  .hire-wide { grid-template-columns: minmax(0, 1fr); }
+  .hire-wide__copy { padding: 1.5rem 1rem; }
+}
+
+/* --- Visit --------------------------------------------------------------------- */
+
+.visit-section { padding-block: 5rem 6.5rem; }
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.panel { padding: 2.25rem; }
+
+.panel > .eyebrow { margin-bottom: 0.85rem; }
+
+.panel h2 {
+  font-size: var(--text-5xl);
+  line-height: 1.02;
+  margin-bottom: 0.75rem;
+}
+
+.panel > p { font-size: var(--text-base); line-height: 1.5; color: var(--ink-soft); }
+
+.form { margin-top: 1.5rem; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+.form input,
+.form select,
+.form textarea {
+  border-color: var(--hairline);
+  background: color-mix(in srgb, #0A0706 45%, transparent);
+  font-size: var(--text-base);
+}
+
+.form input::placeholder,
+.form textarea::placeholder { color: color-mix(in srgb, var(--foreground) 34%, transparent); }
+
+.form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: var(--text-2xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.form textarea { min-height: 6rem; }
+.form button { text-transform: uppercase; letter-spacing: 0.12em; font-size: var(--text-sm); }
+
+.form__status {
+  margin-top: 0.25rem;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--accent);
+}
+
+.form__status:empty { margin-top: 0; }
+
+.hours { display: flex; flex-direction: column; margin-top: 1.25rem; }
+
+.hours li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  font-size: var(--text-base);
+  color: var(--ink-soft);
+}
+
+.hours li + li { border-top: 1px solid var(--hairline); }
+
+.hours li span:first-child { letter-spacing: 0.08em; text-transform: uppercase; font-size: var(--text-sm); }
+.hours__leader { flex: 1; height: 0.5em; border-bottom: 1px dotted color-mix(in srgb, var(--foreground) 22%, transparent); }
+.hours li[data-today='true'] { color: var(--foreground); }
+.hours li[data-today='true'] span:last-child { color: var(--accent); }
+
+.visit-facts { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.75rem; }
+
+.fact { display: flex; gap: 0.9rem; align-items: flex-start; }
+
+.fact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  border-radius: calc(var(--radius) - 3px);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.fact__icon svg { width: 1rem; height: 1rem; }
+.fact h4 { font-size: var(--text-2xl); letter-spacing: -0.005em; }
+.fact p { font-size: var(--text-base); line-height: 1.45; color: var(--ink-soft); }
+.fact a { border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.fact a:hover { color: var(--accent); }
+
+@media (width <= 900px) {
+  .visit-grid { grid-template-columns: minmax(0, 1fr); }
+  .panel { padding: 1.5rem; }
+  .form__row { grid-template-columns: 1fr; }
+}
+
+/* --- Footer ----------------------------------------------------------------------
+   The core footer paints itself in --primary-cta. Amber across the full width
+   would shout louder than anything above it. */
+
+.site-footer {
+  border-radius: 0;
+  border-top: 1px solid var(--hairline);
+  background: #0A0706;
+  color: var(--foreground);
+  padding-block: 4.5rem 2.5rem;
+}
+
+.site-footer__wordmark {
+  width: 100%;
+  white-space: nowrap;
+  line-height: 0.78;
+  letter-spacing: 0.01em;
+  font-size: var(--text-9xl);
+  color: color-mix(in srgb, var(--foreground) 92%, transparent);
+}
+
+.footer-cols a {
+  font-size: var(--text-base);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.footer-cols a:hover { color: var(--accent); opacity: 1; }
+.footer-cols svg { color: var(--accent); }
+
+.footer-legal {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hairline);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-faint);
+  opacity: 1;
+}
+
+/* --- Reveal ------------------------------------------------------------------------
+   Heavier than the core default: more travel, slower settle, no blur filter on
+   large blocks because that repaints the whole layer on a phone. */
+
+.reveal {
+  transform: translateY(2.5rem);
+  transition: opacity 0.9s var(--ease-soft), transform 0.9s var(--ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media video { display: none; }
+  .status::before { animation: none; }
+}
+
+/* Once the hero is behind you the bar needs its own ground to sit on. */
+body.past-hero .navbar__bar {
+  background: color-mix(in srgb, #0A0706 86%, transparent);
+  border-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+/* The chat bubble is fixed to the bottom right corner, which is exactly where
+   the hero's buttons land on a laptop screen. The hero keeps clear of it. */
+@media (width > 768px) {
+  .hero { padding-bottom: 6rem; }
+}

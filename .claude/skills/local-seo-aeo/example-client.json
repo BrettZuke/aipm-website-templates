@@ -1,0 +1,21 @@
+{
+  "business": { "name": "Lumenfield Electrical", "type": "Electrician", "owner": "Dave Whitfield",
+    "one_line": "We rewire, fit and test electrics for homes in Sheffield",
+    "founded": "2014", "phone": "+44 114 496 0000", "email": "hello@lumenfield.example",
+    "site": "https://lumenfield.example", "price_range": "££", "currency": "GBP" },
+  "address": { "show": true, "street": "12 Attercliffe Road", "town": "Sheffield",
+    "region": "South Yorkshire", "postcode": "S4 7WA", "country": "GB", "lat": 53.3899, "lng": -1.4459 },
+  "areas": ["Sheffield", "Rotherham", "Chesterfield"],
+  "hours": [{ "days": ["Mo","Tu","We","Th","Fr"], "open": "08:00", "close": "17:30" }],
+  "services": [
+    { "name": "Rewiring", "slug": "rewiring", "money": true, "blurb": "Full house rewires, done room by room so you keep power.", "price_from": "2400" },
+    { "name": "Fuse box upgrades", "slug": "fuse-box-upgrades", "money": true, "price_from": "450" },
+    { "name": "EICR testing", "slug": "eicr-testing", "money": true, "price_from": "150" }
+  ],
+  "why_us": ["NICEIC approved", "Fixed price before we start"],
+  "credentials": ["NICEIC 987654", "2 million public liability"],
+  "reviews": { "google_url": "https://g.page/r/example", "rating": 4.8, "count": 92 },
+  "faqs": [ { "q": "Do you charge to quote?", "a": "No, quotes are free and fixed before we start." },
+            { "q": "How long does a rewire take?", "a": "Three to five days for a typical three bedroom house." } ],
+  "profiles": { "facebook": "https://facebook.com/example" }
+}

@@ -1,0 +1,379 @@
+/* ==========================================================================
+   TALLGRASS TOWING
+   The road itself: concrete, asphalt, highway sign green, tow light amber
+   and Highway Gothic lettering (Overpass). Hero with the phone number on a
+   green guide sign, a rate strip, the interstates we cover as shields, mile
+   marker figures, services, the route a tow takes, reviews, FAQ, dispatch.
+   ========================================================================== */
+
+:root {
+  --background: #EFEEEA;
+  --card: #FFFFFF;
+  --foreground: #17191C;
+  --primary-cta: #FFB400;
+  --primary-cta-text: #17191C;
+  --secondary-cta: #FFFFFF;
+  --secondary-cta-text: #17191C;
+  --accent: #0B6B3A;
+  --background-accent: #E2E0DA;
+  --radius: 0.5rem;
+  --content-width: 88vw;
+  --section-head-size: var(--text-7xl);
+  --nav-ink: #FFFFFF;
+  --nav-ink-scrolled: #FFFFFF;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Overpass', 'Public Sans', sans-serif;
+
+  --asphalt: #17191C;
+  --sign: #0B6B3A;
+  --amber: #FFB400;
+  --line: #DAD8D1;
+  --muted: #54534E;
+}
+
+@media (width >= 1600px) {
+  :root { --content-width: clamp(40rem, 88vw, 98rem); }
+}
+
+.ambient { display: none; }
+body { background: var(--background); }
+figure, dd { margin: 0; }
+
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; }
+
+.section-head h2,
+.grad-head { background: none; color: var(--foreground); }
+
+.section-head h2 { max-width: 16ch; line-height: 1; letter-spacing: -0.02em; }
+.section-head > p { max-width: 52ch; color: var(--muted); }
+
+.kicker { font-family: var(--font-heading); font-size: var(--text-base); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+
+/* --- Buttons -------------------------------------------------------------- */
+
+.btn { height: 3.15rem; padding-inline: 1.4rem 0.5rem; border-radius: 8px; font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 800; letter-spacing: 0.01em; }
+.btn--arrow .btn__icon { width: 2.1rem; height: 2.1rem; border-radius: 6px; background: var(--asphalt); color: var(--amber); }
+.btn--arrow .btn__icon svg { width: 1rem; height: 1rem; }
+.primary-button, .secondary-button { box-shadow: none; }
+.secondary-button { border: 2px solid var(--foreground); }
+.secondary-button.btn--arrow .btn__icon { background: var(--foreground); color: #fff; }
+.primary-button:hover { background: #F0A800; }
+
+/* --- Nav: asphalt, with a guide sign for a mark ----------------------------- */
+
+.navbar--bar .navbar__bar {
+  background: rgba(23, 25, 28, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.navbar__brand { display: inline-flex; align-items: center; gap: 0.6rem; color: #fff !important; font-family: var(--font-heading); font-size: 1.45rem; font-weight: 900; letter-spacing: 0.01em; }
+.navbar__brand::before { content: ''; width: 1.9rem; height: 1.25rem; border-radius: 4px; background: var(--sign); box-shadow: inset 0 0 0 2px var(--sign), inset 0 0 0 3.5px #fff; }
+.navbar__links a { color: #fff; font-weight: 500; }
+.navbar__toggle { color: #fff; background: transparent; border: 1px solid rgba(255, 255, 255, 0.3); }
+.navbar--bar .navbar__actions .btn { height: 2.65rem; font-size: var(--text-base); }
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: max(100svh, 44rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: var(--asphalt);
+  color: #fff;
+}
+
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15, 16, 18, 0.9) 0%, rgba(15, 16, 18, 0.66) 46%, rgba(15, 16, 18, 0.12) 100%),
+    linear-gradient(0deg, rgba(15, 16, 18, 0.75) 0%, rgba(15, 16, 18, 0) 50%);
+}
+
+.hero__inner { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: end; padding-block: 9rem 6.5rem; }
+.hero__copy { display: flex; flex-direction: column; align-items: flex-start; gap: 1.35rem; }
+.hero .kicker { color: var(--amber); }
+.hero__title { max-width: 12ch; font-size: clamp(3.3rem, 6.8vw, 7.2rem); font-weight: 900; line-height: 0.92; letter-spacing: -0.025em; }
+.hero__lede { max-width: 46ch; font-size: var(--text-xl); line-height: 1.55; color: rgba(255, 255, 255, 0.88); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.hero .secondary-button { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.7); }
+.hero .secondary-button .btn__icon { background: #fff; color: var(--asphalt); }
+
+/* The phone number, as a green guide sign with its plaque underneath. */
+.signpost { display: flex; flex-direction: column; align-items: stretch; gap: 0.5rem; width: 21rem; }
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.3rem 1.5rem 1.2rem;
+  border-radius: 14px;
+  background: var(--sign);
+  color: #fff;
+  font-family: var(--font-heading);
+  box-shadow: inset 0 0 0 5px var(--sign), inset 0 0 0 8px #fff, 0 30px 50px -25px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sign:hover { transform: translateY(-3px); }
+.sign__top { font-size: 1rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.sign__num { font-size: 2.35rem; font-weight: 800; line-height: 1.05; letter-spacing: 0.01em; white-space: nowrap; }
+.sign__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 0.3rem; padding-top: 0.55rem; border-top: 2px solid rgba(255, 255, 255, 0.85); font-size: 1.05rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.sign__foot svg { width: 1.6rem; height: 1.6rem; }
+
+.plaque {
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  background: var(--amber);
+  color: var(--asphalt);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 3px var(--amber), inset 0 0 0 5px var(--asphalt);
+}
+
+/* --- Rate strip ------------------------------------------------------------- */
+
+.rates { background: var(--amber); color: var(--asphalt); }
+.rates__inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.rates p { display: flex; align-items: baseline; gap: 0.7rem; padding: 1.3rem 1rem; font-size: var(--text-base); font-weight: 500; }
+.rates p + p { border-left: 2px solid rgba(23, 25, 28, 0.2); }
+.rates b { font-family: var(--font-heading); font-size: var(--text-4xl); font-weight: 900; line-height: 1; }
+
+/* --- Service area: interstate shields over the prairie road -------------------- */
+
+.area { position: relative; overflow: hidden; color: #fff; background: var(--asphalt); }
+.area__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.area::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 16, 18, 0.82) 0%, rgba(15, 16, 18, 0.55) 45%, rgba(15, 16, 18, 0.8) 100%); }
+.area__inner { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 2.2rem; padding-block: 6rem; }
+.area .kicker { color: var(--amber); }
+.area__copy h2 { margin: 0.8rem 0 1rem; font-size: var(--section-head-size); line-height: 0.98; max-width: 13ch; }
+.area__copy p:not(.kicker) { max-width: 46ch; font-size: var(--text-lg); line-height: 1.55; color: rgba(255, 255, 255, 0.86); }
+
+.shields { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.shields li { position: relative; width: 7.2rem; height: 7.2rem; filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45)); }
+.shields svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.shields__label { position: absolute; top: 15%; left: 0; right: 0; text-align: center; font-family: var(--font-heading); font-size: 0.58rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
+.shields__num { position: absolute; top: 34%; left: 0; right: 0; text-align: center; font-family: var(--font-heading); font-size: 2.6rem; font-weight: 900; line-height: 1; color: #fff; }
+.shields li:nth-child(n + 4) .shields__num { font-size: 2.1rem; top: 37%; }
+
+.towns { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.towns li { padding: 0.4rem 0.8rem; border: 2px solid rgba(255, 255, 255, 0.85); border-radius: 6px; font-family: var(--font-heading); font-size: var(--text-base); font-weight: 800; letter-spacing: 0.02em; background: rgba(11, 107, 58, 0.85); }
+
+/* --- Mile markers ------------------------------------------------------------ */
+
+.markers { padding-block: 3.5rem; background: var(--background); border-bottom: 1px solid var(--line); }
+.markers__row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1.3rem 1rem 1.2rem;
+  border-radius: 8px;
+  background: var(--sign);
+  color: #fff;
+  font-family: var(--font-heading);
+  text-align: center;
+  box-shadow: inset 0 0 0 4px var(--sign), inset 0 0 0 6px #fff;
+}
+.marker span { font-size: var(--text-sm); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.marker strong { font-size: var(--text-7xl); font-weight: 900; line-height: 1; }
+
+/* --- Services ---------------------------------------------------------------- */
+
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.service { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.service img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.service:hover img { transform: scale(1.04); }
+.service > div { position: relative; z-index: 1; display: grid; gap: 0.35rem; padding: 1.15rem 1.25rem 1.35rem; background: var(--card); border-top: 4px solid var(--amber); }
+.service h3 { font-size: var(--text-2xl); }
+.service p { font-size: var(--text-base); line-height: 1.5; color: var(--muted); }
+.service span { margin-top: 0.2rem; font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 900; color: var(--accent); }
+
+/* --- The route a tow takes --------------------------------------------------------- */
+
+.section--flush { padding-top: 1rem; }
+
+.route {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding-top: 4.5rem;
+}
+
+/* The road: asphalt with a dashed centre line, running under the stops. */
+.route::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3rem;
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(90deg, var(--amber) 0 2.2rem, transparent 2.2rem 3.6rem) 0 50% / 100% 4px no-repeat,
+    linear-gradient(#fff, #fff) 0 6px / 100% 2px no-repeat,
+    linear-gradient(#fff, #fff) 0 calc(100% - 6px) / 100% 2px no-repeat,
+    var(--asphalt);
+}
+
+.route li { position: relative; display: flex; flex-direction: column; gap: 0.4rem; }
+.route li::before { content: ''; position: absolute; top: -3.1rem; left: 1rem; width: 3px; height: 1.5rem; background: var(--asphalt); }
+.route__exit { align-self: flex-start; padding: 0.3rem 0.7rem; border-radius: 6px; background: var(--sign); color: #fff; font-family: var(--font-heading); font-size: var(--text-sm); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: inset 0 0 0 2px var(--sign), inset 0 0 0 3.5px #fff; }
+.route h3 { margin-top: 0.3rem; font-size: var(--text-3xl); }
+.route p { font-size: var(--text-base); line-height: 1.5; color: var(--muted); }
+
+/* --- Reviews ------------------------------------------------------------------- */
+
+.reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.review { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.review__where { align-self: flex-start; padding: 0.25rem 0.65rem; border-radius: 5px; background: var(--asphalt); color: var(--amber); font-family: var(--font-heading); font-size: var(--text-sm); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.review blockquote { margin: 0; font-size: var(--text-lg); line-height: 1.55; }
+.review__who { display: flex; align-items: center; gap: 0.75rem; margin-top: auto; font-size: var(--text-sm); color: var(--muted); }
+.review__who strong { display: block; font-size: var(--text-base); color: var(--foreground); }
+.review__who img { width: 2.6rem; height: 2.6rem; border-radius: 50%; object-fit: cover; }
+.stars { display: flex; gap: 0.2rem; color: #E09A00; }
+.stars svg { width: 1rem; height: 1rem; fill: currentColor; }
+
+/* --- FAQ -------------------------------------------------------------------------- */
+
+.faq { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.faq__intro { position: sticky; top: 7rem; }
+.faq__intro h2 { margin-top: 0.8rem; font-size: var(--section-head-size); line-height: 1; max-width: 11ch; }
+.accordion__item { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.accordion__trigger h3 { font-size: var(--text-2xl); font-weight: 800; }
+.accordion .badge-num { width: 2.1rem; height: 2.1rem; border-radius: 6px; background: var(--amber); color: var(--asphalt); }
+.accordion .badge-num svg { width: 1rem; height: 1rem; transition: transform 0.3s; }
+.accordion__item[data-open='true'] .badge-num svg { transform: rotate(45deg); }
+.accordion__panel p { color: var(--muted); }
+
+/* --- Contact ------------------------------------------------------------------------- */
+
+.contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
+.contact__panel { display: flex; flex-direction: column; gap: 0.9rem; padding: 2.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.contact__panel h2 { font-size: var(--text-6xl); line-height: 1; max-width: 13ch; }
+.contact__panel > p:not(.kicker) { font-size: var(--text-lg); line-height: 1.5; color: var(--muted); margin-bottom: 0.5rem; }
+.contact__panel .form button { height: 3.25rem; border-radius: 8px; font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 900; }
+.form input, .form select, .form textarea { border-radius: 8px; background: #FAFAF8; }
+
+.contact__media { position: relative; overflow: hidden; border-radius: var(--radius); }
+.contact__media img { width: 100%; height: 100%; min-height: 26rem; object-fit: cover; }
+.contact__media figcaption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.25rem 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-radius: 10px;
+  background: var(--amber);
+  color: var(--asphalt);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+.contact__media figcaption b { grid-column: 1; font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 900; }
+.contact__media figcaption a { grid-column: 2; grid-row: 1 / span 2; display: inline-flex; align-items: center; height: 2.8rem; padding-inline: 1.1rem; border-radius: 6px; background: var(--asphalt); color: #fff; font-family: var(--font-heading); font-weight: 900; }
+
+/* --- Footer ------------------------------------------------------------------------ */
+
+.site-footer { position: relative; padding-block: 4.75rem 3rem; border-radius: 0; background: var(--asphalt); color: #fff; }
+.lane { position: absolute; left: 0; right: 0; top: 1.4rem; height: 4px; background: repeating-linear-gradient(90deg, var(--amber) 0 2.6rem, transparent 2.6rem 4.2rem); }
+.footer-top { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+.footer-brand { font-family: var(--font-heading); font-size: var(--text-6xl); font-weight: 900; line-height: 1; }
+.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(9rem, auto)); gap: 2.5rem; }
+.footer-nav h3 { margin-bottom: 1rem; font-size: var(--text-sm); font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); }
+.footer-nav ul { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-nav a { font-size: var(--text-lg); color: rgba(255, 255, 255, 0.86); transition: color 0.2s; }
+.footer-nav a:hover { color: #fff; }
+.footer-legal-bar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: var(--text-base); color: rgba(255, 255, 255, 0.72); }
+.footer-legal-bar div { display: flex; gap: 1.25rem; }
+
+/* --- Laptop and below ------------------------------------------------------------------ */
+
+@media (width <= 1100px) {
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rates__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rates p:nth-child(3) { border-left: 0; }
+  .rates p:nth-child(n + 3) { border-top: 2px solid rgba(23, 25, 28, 0.2); }
+}
+
+@media (width <= 960px) {
+  .hero__inner, .faq, .contact { grid-template-columns: minmax(0, 1fr); }
+  .faq__intro { position: static; }
+  .reviews { grid-template-columns: minmax(0, 1fr); }
+  .markers__row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* The road turns to run down the page. */
+  .route { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding: 0 0 0 4.25rem; }
+  .route::before {
+    right: auto;
+    bottom: 0;
+    width: 3rem;
+    height: auto;
+    background:
+      repeating-linear-gradient(180deg, var(--amber) 0 2.2rem, transparent 2.2rem 3.6rem) 50% 0 / 4px 100% no-repeat,
+      linear-gradient(#fff, #fff) 6px 0 / 2px 100% no-repeat,
+      linear-gradient(#fff, #fff) calc(100% - 6px) 0 / 2px 100% no-repeat,
+      var(--asphalt);
+  }
+  .route li::before { top: 1rem; left: -1.25rem; width: 1.25rem; height: 3px; }
+}
+
+@media (width <= 768px) {
+  .hero { min-height: 0; }
+  .hero::after { background: linear-gradient(180deg, rgba(15, 16, 18, 0.74) 0%, rgba(15, 16, 18, 0.84) 32%, rgba(15, 16, 18, 0.92) 100%); }
+  .hero__inner { padding-block: 7.5rem 3rem; gap: 2rem; }
+  .hero__title { font-size: clamp(2.9rem, 13.5vw, 4.2rem); }
+  .hero__lede { font-size: var(--text-lg); }
+  .signpost { width: 100%; }
+  .sign__num { font-size: 2.1rem; }
+
+  .rates p { flex-direction: column; gap: 0.3rem; padding: 1rem 0.6rem; font-size: var(--text-sm); }
+  .rates p:nth-child(even) { padding-left: 1rem; }
+  .rates b { font-size: var(--text-3xl); }
+
+  .area__inner { padding-block: 4rem; }
+  .area__copy h2 { font-size: var(--text-7xl); }
+  .shields { gap: 0.6rem; }
+  .shields li { width: 4.9rem; height: 4.9rem; }
+  .shields__label { font-size: 0.4rem; }
+  .shields__num { font-size: 1.75rem; }
+  .shields li:nth-child(n + 4) .shields__num { font-size: 1.4rem; }
+
+  .markers { padding-block: 2.5rem; }
+  .markers__row { gap: 0.75rem; }
+  .marker strong { font-size: var(--text-6xl); }
+
+  .services { grid-template-columns: minmax(0, 1fr); }
+  .faq__intro h2 { font-size: var(--text-7xl); }
+
+  .contact__panel { padding: 1.5rem; }
+  .contact__panel h2 { font-size: var(--text-6xl); }
+  .contact__media img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
+  .contact__media figcaption { position: static; border-radius: 0; }
+
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .footer-brand { font-size: var(--text-5xl); }
+}
+
+/* Menu open: the bar clears over the yellow panel, so the brand takes the panel's dark ink. */
+html body.nav-open .navbar .navbar__brand { color: var(--primary-cta-text) !important; }

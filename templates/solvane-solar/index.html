@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solvane Solar: Solar Panels and Batteries in Phoenix</title>
+<meta name="description" content="Rooftop solar and batteries across the Phoenix metro, designed from a drone survey of your roof and installed by our own crews. Estimate your savings in ten seconds.">
+<meta property="og:title" content="Solvane Solar">
+<meta property="og:description" content="More sun than anywhere. Use it. Solar and batteries across the Valley.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.webp">
+<meta name="theme-color" content="#F7EFE3">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=chubbo@500,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,700&display=swap">
+<link rel="stylesheet" href="./core/tokens.css">
+<link rel="stylesheet" href="./core/core.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="./core/growth-kit.css">
+</head>
+<body>
+
+<nav class="navbar navbar--bar" aria-label="Main">
+  <div class="navbar__panel" id="nav-panel">
+    <a href="#savings">Savings
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#systems">Systems
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#install">The install
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#contact">Free design
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </div>
+
+  <div class="navbar__bar">
+    <a class="navbar__brand" href="#top">Solvane</a>
+
+    <div class="navbar__links">
+      <a href="#savings">Savings</a>
+      <a href="#systems">Systems</a>
+      <a href="#install">The install</a>
+      <a href="#contact">Free design</a>
+    </div>
+
+    <div class="navbar__actions">
+      <a class="btn btn--arrow primary-button" href="#contact" data-open-quote>
+        <span class="btn__label">Get a free design</span>
+        <span class="btn__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero section">
+    <img class="hero__bg" src="assets/hero.webp" alt="Saguaro cactus in the Sonoran desert at golden hour" width="1880" height="1253">
+
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="kicker">Phoenix and the East Valley</p>
+        <h1 class="hero__title">More sun than anywhere. <span class="keep">Use it.</span></h1>
+        <p class="hero__lede">Rooftop solar and batteries across the Valley, designed from a drone survey of your actual roof and installed by our own crews. Most homes cut their APS or SRP bill by seventy to ninety percent.</p>
+        <div class="hero__actions">
+          <a class="btn btn--arrow primary-button" href="#savings">
+            <span class="btn__label">Estimate my savings</span>
+            <span class="btn__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a class="btn btn--arrow secondary-button" href="#contact" data-open-quote>
+            <span class="btn__label">Get a free design</span>
+            <span class="btn__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__bill" aria-label="A typical Valley bill, before and after solar">
+        <p class="hero__bill-head">A typical Valley bill, July</p>
+        <div class="hero__bill-row"><span>Before</span><s>$284</s></div>
+        <div class="hero__bill-row hero__bill-row--after"><span>With Solvane</span><b>$36</b></div>
+      </div>
+    </div>
+
+    <!-- Enquiry form. Floats over the cover and takes no space in the
+         layout, so the design underneath is never pushed around. -->
+    <div data-growth-form="right"></div>
+  </section>
+
+  <!-- Savings estimator -->
+  <section class="section estimator" id="savings" aria-label="Savings estimator">
+    <div class="wrap estimator__grid">
+      <div class="estimator__controls reveal">
+        <p class="kicker">Your roof, your numbers</p>
+        <h2>Slide to your summer bill</h2>
+        <label class="slider" for="bill-range">
+          <span>Your highest summer bill</span>
+          <output id="bill-out" for="bill-range">$260</output>
+        </label>
+        <input id="bill-range" type="range" min="100" max="500" step="10" value="260" aria-label="Your highest summer bill in dollars">
+        <div class="slider__scale" aria-hidden="true"><span>$100</span><span>$300</span><span>$500</span></div>
+
+        <dl class="results">
+          <div><dt>System size</dt><dd data-out="kw">8.0 kW</dd></div>
+          <div><dt>Panels</dt><dd data-out="panels">20</dd></div>
+          <div><dt>Saved in year one</dt><dd data-out="save">$1,830</dd></div>
+          <div><dt>Pays for itself in</dt><dd data-out="payback">about 11 years</dd></div>
+        </dl>
+        <p class="estimator__note">A rough guide from Phoenix sun hours and typical APS and SRP rates, before any incentives. Your free design uses your real usage and your real roof.</p>
+        <a class="btn btn--arrow primary-button" href="#contact" data-open-quote>
+          <span class="btn__label">Get my free design</span>
+          <span class="btn__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="statement reveal" aria-live="polite">
+        <div class="statement__head">
+          <span class="sun-mark" aria-hidden="true"></span>
+          <p>Your electric bill, with and without solar</p>
+        </div>
+        <div class="statement__totals">
+          <div><span>July, now</span><strong data-out="before">$260</strong></div>
+          <div class="statement__after"><span>July, with Solvane</span><strong data-out="after">$43</strong></div>
+        </div>
+        <div class="chart" aria-hidden="true">
+          <div class="chart__bars" data-chart></div>
+          <div class="chart__months"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+        </div>
+        <div class="statement__key"><span class="k-use"></span>What the house uses<span class="k-sun"></span>What the roof makes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Systems -->
+  <section class="section section--flush" id="systems" aria-label="Systems and prices">
+    <div class="wrap stack">
+      <div class="section-head section-head--left reveal">
+        <p class="kicker">Systems and prices</p>
+        <h2>Four systems, sized to your bill</h2>
+        <p>Every system uses the same tier one panels and the same crew. The difference is how much of your bill you want gone.</p>
+      </div>
+      <div class="systems reveal-stagger">
+        <article class="system">
+          <img src="assets/sys-starter.webp" alt="Solar panels on a terracotta tile roof" loading="lazy" width="1100" height="733">
+          <div class="system__body">
+            <h3>Starter 6 kW</h3>
+            <p>Around 60% of a typical bill. 15 panels, one day on the roof.</p>
+            <span>$15,900</span>
+          </div>
+        </article>
+        <article class="system system--pick">
+          <img src="assets/sys-family.webp" alt="Stucco family homes with tile roofs" loading="lazy" width="1100" height="733">
+          <div class="system__body">
+            <p class="system__flag">Most homes pick this</p>
+            <h3>Family 8 kW</h3>
+            <p>Around 80% of a typical bill. 20 panels, one to two days.</p>
+            <span>$19,800</span>
+          </div>
+        </article>
+        <article class="system">
+          <img src="assets/sys-battery.webp" alt="A single storey stucco house with an installer on the roof" loading="lazy" width="1100" height="825">
+          <div class="system__body">
+            <h3>Whole home + battery</h3>
+            <p>10 kW with a 13.5 kWh battery. Bill near zero, power through outages.</p>
+            <span>$34,500</span>
+          </div>
+        </article>
+        <article class="system">
+          <img src="assets/product-4.webp" alt="A homeowner plugging an electric car into a garage charger" loading="lazy" width="800" height="533">
+          <div class="system__body">
+            <h3>EV charger add on</h3>
+            <p>Level 2, charging from your own roof. Fitted the same day.</p>
+            <span>$1,450</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section class="section" id="install" aria-label="The install">
+    <div class="wrap stack">
+      <div class="section-head section-head--left reveal">
+        <p class="kicker">The install</p>
+        <h2>Four weeks, with a date for every stage</h2>
+      </div>
+      <ol class="stages reveal-stagger">
+        <li class="stage"><img src="assets/stage-1.webp" alt="An aerial view of a roof being surveyed" loading="lazy" width="700" height="525"><span>Week 1</span><h3>Drone survey</h3><p>We fly your roof, measure every face and check the shade.</p></li>
+        <li class="stage"><img src="assets/step-wire.webp" alt="An installer wiring a mounting rail on a roof" loading="lazy" width="1000" height="666"><span>Week 2</span><h3>Design and permit</h3><p>Your design, your price, and the city permit filed for you.</p></li>
+        <li class="stage"><img src="assets/step-lift.webp" alt="An installer lifting a solar panel onto a tile roof" loading="lazy" width="1000" height="750"><span>Week 3</span><h3>Install day</h3><p>Our own crew on your roof for one or two days, then gone.</p></li>
+        <li class="stage"><img src="assets/step-on.webp" alt="A finished home with solar panels across its tile roof" loading="lazy" width="1300" height="976"><span>Week 4</span><h3>Switched on</h3><p>Inspection passed, the utility connects you, the app goes live.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="section section--sand" id="why" aria-label="Why homes pick us">
+    <div class="wrap why">
+      <figure class="why__media reveal">
+        <img src="assets/why.webp" alt="Two Solvane installers fixing panels on a sunny roof" loading="lazy" width="1400" height="788">
+      </figure>
+      <div class="why__copy reveal">
+        <p class="kicker">Why the Valley picks us</p>
+        <h2>Still earning in year twenty</h2>
+        <ul class="why__list">
+          <li><h3>Our own crews</h3><p>The people who design your system install it. No lead sold on to whoever is cheapest this month.</p></li>
+          <li><h3>Tier one panels, 25 years</h3><p>A 25 year panel warranty and our own 25 year workmanship warranty on top.</p></li>
+          <li><h3>Every panel on your phone</h3><p>Panel level monitoring. If one drops, we usually spot it before you do and come out free.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews" aria-label="Testimonials section">
+    <div class="wrap stack">
+      <div class="section-head section-head--left reveal">
+        <p class="kicker">Reviews</p>
+        <h2>Bills from around the Valley</h2>
+      </div>
+      <div class="reviews reveal-stagger">
+        <article class="review">
+          <p class="review__bill"><s>$341</s><b>$29</b><span>August bill</span></p>
+          <blockquote>"They sized it to what we actually use instead of trying to sell us the biggest system. The August bill was twenty nine dollars."</blockquote>
+          <p class="review__who"><img src="assets/author-1.webp" alt="" loading="lazy" width="300" height="424"><span><strong>Maya Ortiz</strong>Chandler</span></p>
+        </article>
+        <article class="review">
+          <p class="review__bill"><s>$268</s><b>$41</b><span>July bill</span></p>
+          <blockquote>"The crew was on the roof for a day and a half and left it cleaner than they found it. The app shows every panel, which my kids check more than I do."</blockquote>
+          <p class="review__who"><img src="assets/author-2.webp" alt="" loading="lazy" width="300" height="450"><span><strong>Daniel Reyes</strong>Mesa</span></p>
+        </article>
+        <article class="review">
+          <p class="review__bill"><s>$412</s><b>$18</b><span>June bill</span></p>
+          <blockquote>"We lost power for six hours in a monsoon storm and did not notice until the neighbours knocked. The battery was worth it for that alone."</blockquote>
+          <p class="review__who"><img src="assets/author-3.webp" alt="" loading="lazy" width="300" height="450"><span><strong>Jake Whitman</strong>Gilbert</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--flush" id="faq" aria-label="FAQ section">
+    <div class="wrap faq">
+      <div class="faq__intro reveal">
+        <p class="kicker">Questions</p>
+        <h2>Starting with the one everybody asks</h2>
+      </div>
+      <div class="accordion reveal" data-accordion>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>How much will I actually save?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>Most of our customers cut their APS or SRP bill by seventy to ninety percent. We show you the numbers from your last twelve bills before you sign anything, not a national average.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>How long does it take to install?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>The crew is usually on your roof for one or two days. The whole process, including design, the permit and the utility switching you on, takes about four to six weeks.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>Is there a tax credit?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>The federal credit for homeowner owned systems is set by current law, which has changed recently. We check what applies to your install on the day you sign and show it on the quote, rather than promising a number.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>What if my roof needs replacing?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>We check the roof on the survey. If it has less than ten years left, we tell you to replace it first, and we remove and reinstall panels later at a fixed price if you ever need a new roof.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>What happens in a monsoon outage?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>Panels alone shut off when the grid goes down, for the safety of line workers. With a battery, your home keeps running on stored and solar power until the grid comes back.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button"><h3>Do you offer financing?</h3><span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="accordion__panel"><div><p>Yes, and cash, loan or lease are all quoted side by side on the same page so you can compare the real twenty five year cost of each.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-label="Contact section">
+    <div class="wrap contact">
+      <div class="contact__panel reveal">
+        <p class="kicker">Free design</p>
+        <h2>Send us a bill. We send you a roof.</h2>
+        <p>Your address and a recent utility bill. We fly the roof and send a design and a written price with your own savings figures, usually within three days.</p>
+        <form class="form" data-form>
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required>
+          <input type="email" name="email" placeholder="Email address" autocomplete="email">
+          <textarea name="message" placeholder="Your address, and roughly your monthly bill" required></textarea>
+          <button class="primary-button" type="submit">Get my design</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <figure class="contact__media reveal">
+        <img src="assets/contact.webp" alt="Homes on a hillside above Phoenix at dusk" loading="lazy" width="1400" height="933">
+        <figcaption><span class="sun-mark" aria-hidden="true"></span>Phoenix, Scottsdale, Tempe, Mesa, Chandler, Gilbert and Glendale</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span class="sunset-rule" aria-hidden="true"><i></i><i></i><i></i></span>
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-brand">Solvane Solar</p>
+      <div class="footer-nav">
+        <div>
+          <h3>Solar</h3>
+          <ul>
+            <li><a href="#systems">Systems and prices</a></li>
+            <li><a href="#savings">Savings estimator</a></li>
+            <li><a href="#systems">Batteries</a></li>
+            <li><a href="#systems">EV chargers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#install">The install</a></li>
+            <li><a href="#why">Why Solvane</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+16025550167">(602) 555-0167</a></li>
+            <li><a href="mailto:hello@solvanesolar.com">hello@solvanesolar.com</a></li>
+            <li><a href="#contact">Phoenix, AZ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal-bar">
+      <span>© 2026 Solvane Solar</span>
+      <div>
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./core/core.js"></script>
+<script>/* optional: your own Supabase anon key, only for ?site= preview links. Leave it empty for a client site. */
+window.GK_STORE_KEY = "";</script>
+<script src="demo-site.js"></script>
+<script src="./core/growth-kit.js" defer></script>
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-open-quote]');
+    if (!link || typeof window.gkOpenForm !== 'function') return;
+    event.preventDefault();
+    window.gkOpenForm();
+  });
+
+  /* Savings estimator. Deliberately simple and labelled as a guide: an annual
+     average bill of about 72% of the summer peak, 14.5 cents a kWh, 1,750 kWh
+     a year from each kW of panels in Phoenix, 90% offset, 410 W panels and
+     $2.55 a watt installed, with no incentives assumed. */
+  (function () {
+    var range = document.getElementById('bill-range');
+    if (!range) return;
+    var out = document.getElementById('bill-out');
+    var chart = document.querySelector('[data-chart]');
+    var use = [0.56, 0.5, 0.55, 0.66, 0.86, 1.12, 1.28, 1.26, 1.06, 0.8, 0.6, 0.6];
+    var sun = [0.62, 0.72, 0.93, 1.08, 1.18, 1.2, 1.12, 1.06, 1.0, 0.88, 0.7, 0.6];
+    var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+    var set = function (key, text) {
+      document.querySelectorAll('[data-out="' + key + '"]').forEach(function (el) { el.textContent = text; });
+    };
+    chart.innerHTML = use.map(function () { return '<span class="bar"><i class="bar__use"></i><i class="bar__sun"></i></span>'; }).join('');
+    var bars = chart.querySelectorAll('.bar');
+
+    function update() {
+      var bill = Number(range.value);
+      var average = bill * 0.72;
+      var kwh = average * 12 / 0.145;
+      var kw = Math.max(3, Math.round(kwh * 0.9 / 1750 * 10) / 10);
+      var panels = Math.ceil(kw * 1000 / 410);
+      var after = bill * 0.12 + 12;
+      var saving = Math.round((average - (average * 0.12 + 12)) * 12 / 10) * 10;
+      var years = Math.round(kw * 1000 * 2.55 / saving);
+      out.value = money(bill);
+      out.textContent = money(bill);
+      set('kw', kw.toFixed(1) + ' kW');
+      set('panels', String(panels));
+      set('save', money(saving));
+      set('payback', 'about ' + years + ' years');
+      set('before', money(bill));
+      set('after', money(after));
+      var peak = 1.3;
+      var scale = Math.min(1, 0.45 + bill / 700);
+      bars.forEach(function (bar, i) {
+        bar.children[0].style.height = (use[i] / peak * 100 * scale) + '%';
+        bar.children[1].style.height = (sun[i] / peak * 100 * scale * 0.94) + '%';
+      });
+      range.style.setProperty('--fill', ((bill - 100) / 4) + '%');
+    }
+    range.addEventListener('input', update);
+    update();
+  })();
+</script>
+</body>
+</html>

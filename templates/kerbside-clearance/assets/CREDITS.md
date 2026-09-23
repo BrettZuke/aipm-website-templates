@@ -1,0 +1,28 @@
+# Image and video credits
+
+All assets from Pexels, free to use.
+
+- j01.jpg: Artem Podrez (https://www.pexels.com/photo/man-stacking-boxes-in-a-van-5025665/)
+- j02.jpg: RDNE Stock project (https://www.pexels.com/photo/close-up-shot-of-men-carrying-a-couch-7464662/)
+- j03.jpg: Jimmy Liao (https://www.pexels.com/photo/plants-and-bags-in-garage-15828484/)
+- j04.jpg: Kordanalev (https://www.pexels.com/photo/brown-wooden-shelves-with-books-13600865/)
+- j05.jpg: RDNE Stock project (https://www.pexels.com/photo/a-man-standing-carrying-boxes-talking-to-a-man-sitting-on-a-chair-7464673/)
+- j06.jpg: Aleksander Dumała (https://www.pexels.com/photo/plastic-bags-in-a-yard-24595685/)
+- j07.jpg: SHVETS production (https://www.pexels.com/photo/positive-female-sorting-plastic-bottles-in-kitchen-in-apartment-7512924/)
+- j08.jpg: Pavel Danilyuk (https://www.pexels.com/photo/man-opening-a-door-of-a-delivery-van-6407433/)
+- j09.jpg: Hanna Payasnikava (https://www.pexels.com/photo/a-carpenter-on-the-roof-7788245/)
+- j10.jpg: Mathias Reding (https://www.pexels.com/photo/a-man-in-a-yellow-safety-vest-standing-on-a-street-17719765/)
+- j11.jpg: RDNE Stock project (https://www.pexels.com/photo/woman-in-blue-button-up-uniform-holding-a-tray-5778258/)
+- j12.jpg: Anastasia Shuraeva (https://www.pexels.com/photo/brown-cardboard-boxes-beside-green-plant-5482134/)
+- j13.jpg: Tom Fisk (https://www.pexels.com/photo/mattress-on-floor-in-abandoned-room-12191067/)
+- j14.jpg: Galib Rahman Nadim (https://www.pexels.com/photo/workers-loading-truck-with-garbage-bags-in-park-39037921/)
+- jv1.mp4: RDNE Stock project (https://www.pexels.com/video/men-carrying-a-couch-7464099/)
+- jv2.mp4: Gustavo Fring (https://www.pexels.com/video/man-carrying-boxes-6637303/)
+- t1.jpg: Kindel Media (https://www.pexels.com/photo/close-up-photo-of-woman-in-reflective-vest-8487397/)
+- t2.jpg: Kampus Production (https://www.pexels.com/photo/delivery-man-holding-package-6667674/)
+- t3.jpg: Kindel Media (https://www.pexels.com/photo/woman-engineer-wiping-her-sweat-away-8487783/)
+- t4.jpg: Javid Hashimov (https://www.pexels.com/photo/laborer-in-workshop-18414885/)
+- t5.jpg: Vika Glitter (https://www.pexels.com/photo/cheerful-female-painter-sitting-on-ladder-7075024/)
+- t6.jpg: Ron Lach (https://www.pexels.com/photo/boxes-with-texts-over-man-9169308/)
+- t7.jpg: RDNE Stock project (https://www.pexels.com/photo/man-in-bandana-and-coveralls-standing-near-packages-7464372/)
+- t8.jpg: Gustavo Denuncio (https://www.pexels.com/photo/man-in-a-high-visibility-jacket-26790357/)

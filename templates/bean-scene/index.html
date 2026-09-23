@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bean Scene: Coffee Roastery and Espresso Bar in Holbeck, Leeds</title>
+<meta name="description" content="Small batch coffee roasted in Holbeck and poured on Water Lane. Espresso bar, filter brews and fresh bakes, seven days a week from 7am.">
+<meta property="og:title" content="Bean Scene">
+<meta property="og:description" content="Small batch coffee roasted in Holbeck and poured on Water Lane. Seven days a week from 7am.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero/poster.webp">
+<meta name="theme-color" content="#100C0A">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<!-- Fontshare serves one family per request: asking for both in a single
+     call silently drops the second. -->
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=gambarino@400&display=swap">
+<link rel="stylesheet" href="core/tokens.css">
+<link rel="stylesheet" href="core/core.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="core/growth-kit.css">
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <span class="b1"></span>
+  <span class="b2"></span>
+  <span class="b3"></span>
+</div>
+
+<nav class="navbar navbar--bar" aria-label="Main">
+  <div class="navbar__panel" id="nav-panel">
+    <a href="#roasts">Roasts
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#menu">Menu
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#hire">Hire
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#visit">Book a table
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </div>
+
+  <div class="navbar__bar card">
+    <a class="navbar__brand" href="#top">Bean Scene</a>
+    <div class="navbar__links">
+      <a href="#roasts">Roasts</a>
+      <a href="#menu">Menu</a>
+      <a href="#hire">Hire</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <div class="navbar__actions">
+      <a class="btn primary-button" href="#visit" data-letters>Book a table</a>
+      <button class="navbar__toggle card" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Bean Scene">
+    <div class="hero__media" aria-hidden="true">
+      <img src="assets/hero/poster.webp" alt="" width="1600" height="900" fetchpriority="high">
+      <video src="assets/hero/hero.mp4" poster="assets/hero/poster.webp" autoplay muted loop playsinline preload="metadata"></video>
+    </div>
+
+    <div class="hero__inner wrap">
+      <div class="hero__top">
+        <p class="status" data-hours-status>Checking the clock</p>
+
+        <div class="chips">
+          <div class="chip card">
+            <img src="assets/hero/cup.webp" alt="" width="760" height="1013" loading="eager">
+            <span>
+              <span class="chip__name">Cortado</span>
+              <span class="chip__price">&pound;3.20</span>
+            </span>
+          </div>
+          <div class="chip card">
+            <img src="assets/hero/glass.webp" alt="" width="860" height="860" loading="eager">
+            <span>
+              <span class="chip__name">Cold brew</span>
+              <span class="chip__price">&pound;4.20</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hero__title" data-fit>Bean Scene</h1>
+
+      <div class="hero__foot">
+        <p class="hero__lede">Small batch coffee roasted in Holbeck and poured on Water Lane. Seven days a week, first shot at seven.</p>
+        <div class="hero__actions">
+          <a class="btn primary-button" href="#menu" data-letters>See the menu</a>
+          <a class="btn secondary-button" href="#visit" data-letters>Find us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roasts -->
+  <section class="roast-section" id="roasts" aria-label="This week's roasts">
+    <div class="section-head wrap reveal">
+      <div class="eyebrow card"><p>On the bar this week</p></div>
+      <h2>Three coffees, roasted Thursday</h2>
+      <p>The drum runs once a week in the unit behind the shop. What comes off it is what you drink, and what you take home.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="grid grid--3">
+        <article class="roast-card card shadow-xl reveal">
+          <div class="roast-card__media">
+            <img src="assets/roast/ethiopia.webp" alt="Green coffee beans in a sack" width="1400" height="933" loading="lazy">
+            <span class="roast-card__index">01 / House</span>
+          </div>
+          <div class="roast-card__body">
+            <h3>Guji, Ethiopia</h3>
+            <p class="roast-card__meta">Washed &middot; 1,950m &middot; Light</p>
+            <ul class="notes">
+              <li>Peach</li>
+              <li>Jasmine</li>
+              <li>Black tea</li>
+            </ul>
+            <div class="roast-card__price">
+              <strong>&pound;11.50</strong>
+              <span>250g bag</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="roast-card card shadow-xl reveal">
+          <div class="roast-card__media">
+            <img src="assets/roast/colombia.webp" alt="Roasted coffee beans" width="1400" height="933" loading="lazy">
+            <span class="roast-card__index">02 / Espresso</span>
+          </div>
+          <div class="roast-card__body">
+            <h3>Huila, Colombia</h3>
+            <p class="roast-card__meta">Honey &middot; 1,700m &middot; Medium</p>
+            <ul class="notes">
+              <li>Red apple</li>
+              <li>Toffee</li>
+              <li>Cocoa</li>
+            </ul>
+            <div class="roast-card__price">
+              <strong>&pound;10.50</strong>
+              <span>250g bag</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="roast-card card shadow-xl reveal">
+          <div class="roast-card__media">
+            <img src="assets/roast/brazil.webp" alt="Beans turning in the roaster drum" width="1400" height="932" loading="lazy">
+            <span class="roast-card__index">03 / Filter</span>
+          </div>
+          <div class="roast-card__body">
+            <h3>Cerrado, Brazil</h3>
+            <p class="roast-card__meta">Natural &middot; 1,100m &middot; Medium dark</p>
+            <ul class="notes">
+              <li>Hazelnut</li>
+              <li>Milk chocolate</li>
+              <li>Malt</li>
+            </ul>
+            <div class="roast-card__price">
+              <strong>&pound;9.50</strong>
+              <span>250g bag</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu-section" id="menu" aria-label="Menu">
+    <div class="menu-section__inner">
+      <div class="section-head wrap reveal">
+        <div class="eyebrow card"><p>The board</p></div>
+        <h2>Everything we pour and bake</h2>
+        <p>Prices are the same whether you sit in or take it out. Oat, soya and coconut cost nothing extra.</p>
+        <div class="filters" role="group" aria-label="Filter the menu">
+          <button class="filter card" type="button" aria-pressed="true" data-filter="all"><span class="filter__fill primary-button"></span><span class="filter__label">All</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="espresso"><span class="filter__fill primary-button"></span><span class="filter__label">Espresso bar</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="filter"><span class="filter__fill primary-button"></span><span class="filter__label">Filter and cold</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="pastry"><span class="filter__fill primary-button"></span><span class="filter__label">Bakes</span></button>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="grid grid--4" role="list" aria-live="polite">
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/espresso.webp" alt="Espresso in a glass" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Espresso</h4><span class="item__leader"></span><span class="item__price">&pound;2.60</span></div>
+                <p class="item__note">Huila, pulled as a double. Ask for a single and we will not judge.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/cortado.webp" alt="Cortado in a small glass" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Cortado</h4><span class="item__leader"></span><span class="item__price">&pound;3.20</span></div>
+                <p class="item__note">Double shot cut with warm milk. The one the baristas drink.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/flat-white.webp" alt="Flat white with latte art" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Flat white</h4><span class="item__leader"></span><span class="item__price">&pound;3.40</span></div>
+                <p class="item__note">Six ounces, steamed tight, no foam hat.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/latte.webp" alt="Latte with a rosetta poured on top" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Latte</h4><span class="item__leader"></span><span class="item__price">&pound;3.60</span></div>
+                <p class="item__note">Long and mild. Add a second shot for 60p.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/chai.webp" alt="Chai latte" width="677" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Chai latte</h4><span class="item__leader"></span><span class="item__price">&pound;3.80</span></div>
+                <p class="item__note">Loose leaf, brewed to order, not a syrup pump.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="espresso">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/matcha.webp" alt="Matcha latte in a ceramic cup" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Matcha</h4><span class="item__leader"></span><span class="item__price">&pound;4.00</span></div>
+                <p class="item__note">Ceremonial grade, whisked, hot or over ice.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="filter">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/filter.webp" alt="Pour over brewing into a glass server" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Filter</h4><span class="item__leader"></span><span class="item__price">&pound;3.20</span></div>
+                <p class="item__note">V60 or batch, whatever is fresh. Top up is free.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="filter">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/cold-brew.webp" alt="Cold brew over ice" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Cold brew</h4><span class="item__leader"></span><span class="item__price">&pound;4.20</span></div>
+                <p class="item__note">Steeped eighteen hours. Strong, sweet, no bitterness.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="filter">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/iced-latte.webp" alt="Iced latte in a tall glass" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Iced latte</h4><span class="item__leader"></span><span class="item__price">&pound;4.00</span></div>
+                <p class="item__note">Double shot over ice and cold milk. Oat works best.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="pastry">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/croissant.webp" alt="Butter croissant on a plate" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Croissant</h4><span class="item__leader"></span><span class="item__price">&pound;3.20</span></div>
+                <p class="item__note">Baked down the road, in by half six. Gone by eleven.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="pastry">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/cinnamon-bun.webp" alt="Cinnamon bun" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Cinnamon bun</h4><span class="item__leader"></span><span class="item__price">&pound;3.80</span></div>
+                <p class="item__note">Cardamom in the dough. Warmed if you ask.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="filterable" role="listitem" data-cat="pastry">
+            <article class="item card shadow-xl">
+              <div class="item__media"><img src="assets/menu/cookie.webp" alt="Chocolate chip cookie" width="700" height="1050" loading="lazy"></div>
+              <div class="item__body">
+                <div class="item__line"><h4>Cookie</h4><span class="item__leader"></span><span class="item__price">&pound;2.40</span></div>
+                <p class="item__note">Dark chocolate, sea salt, still soft in the middle.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursor trail -->
+  <section class="trail-section" aria-label="A look around">
+    <div class="trail-layer" data-trail aria-hidden="true">
+      <figure><img src="assets/trail/trail-1.webp" alt="" loading="lazy" width="700" height="1050"></figure>
+      <figure><img src="assets/trail/trail-2.webp" alt="" loading="lazy" width="700" height="1050"></figure>
+      <figure><img src="assets/trail/trail-3.webp" alt="" loading="lazy" width="700" height="1048"></figure>
+      <figure><img src="assets/trail/trail-4.webp" alt="" loading="lazy" width="700" height="1050"></figure>
+      <figure><img src="assets/trail/trail-5.webp" alt="" loading="lazy" width="700" height="933"></figure>
+      <figure><img src="assets/trail/trail-6.webp" alt="" loading="lazy" width="700" height="933"></figure>
+      <figure><img src="assets/trail/trail-7.webp" alt="" loading="lazy" width="700" height="933"></figure>
+      <figure><img src="assets/trail/trail-8.webp" alt="" loading="lazy" width="700" height="875"></figure>
+    </div>
+
+    <div class="trail-section__content wrap">
+      <div class="eyebrow card"><p>Move your cursor</p></div>
+      <h2>Roasted here. Ground here. <em>Poured here.</em></h2>
+      <div class="trail-section__actions">
+        <a class="btn primary-button" href="#visit" data-letters>Book a table</a>
+        <a class="btn secondary-button" href="#roasts" data-letters>Buy beans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="story-section" aria-label="About Bean Scene">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-media card shadow-xl reveal">
+          <img src="assets/story/barista.webp" alt="A barista working the espresso machine" width="676" height="1013" loading="lazy">
+        </div>
+
+        <div class="story-copy reveal">
+          <div class="eyebrow card"><p>Since 2019</p></div>
+          <h2>A roastery that happens to have a counter</h2>
+          <p>Bean Scene started as a 5kg drum roaster in a railway arch and a market stall at the weekend. The shop came second. That order still shows: we buy small, roast weekly, and sell out rather than sit on stock.</p>
+
+          <div class="stat-list">
+            <div class="stat-list__item">
+              <span class="stat-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9a6 6 0 0 1 12 0v11M9 4.5c0-1 .9-1.5.9-2.5M14 4.5c0-1 .9-1.5.9-2.5"/></svg>
+              </span>
+              <h3>Roasted 400 metres away</h3>
+              <p>The drum runs Thursday mornings in the unit behind the shop. You can smell it from the door.</p>
+            </div>
+            <div class="stat-list__item">
+              <span class="stat-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <h3>Open seven days from 7am</h3>
+              <p>First shot at seven on weekdays, eight on Saturday, nine on Sunday. Last order half an hour before close.</p>
+            </div>
+            <div class="stat-list__item">
+              <span class="stat-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.2 8.4a5 5 0 0 1-9.6 0Z"/><path d="M12 12v6M8 21h8"/></svg>
+              </span>
+              <h3>Four ways to brew</h3>
+              <p>V60, Chemex, AeroPress and batch, all on the bar. Tell us what you like and we will pick.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hire -->
+  <section class="hire-section" id="hire" aria-label="Hire and wholesale">
+    <div class="section-head wrap reveal">
+      <div class="eyebrow card"><p>Beyond the counter</p></div>
+      <h2>Put us to work</h2>
+      <p>The back room, a cart at your event, or a standing order of beans on your own shelf.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="grid grid--2">
+        <article class="hire-card card shadow-xl reveal">
+          <img src="assets/events/back-room.webp" alt="Friends talking over coffee in the back room" width="1400" height="788" loading="lazy">
+          <div class="hire-card__body">
+            <h3>The back room</h3>
+            <p>Sits twenty, with a screen and a door that shuts. Free to book on weekday evenings when you are drinking with us.</p>
+          </div>
+        </article>
+
+        <article class="hire-card card shadow-xl reveal">
+          <img src="assets/events/cart.webp" alt="Takeaway coffees set out at an event" width="1397" height="940" loading="lazy">
+          <div class="hire-card__body">
+            <h3>Coffee carts</h3>
+            <p>We bring the bar, the beans and two baristas anywhere in West Yorkshire. Weddings, launches, site openings.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="hire-wide card shadow-xl reveal">
+        <div class="hire-wide__copy">
+          <h3>Wholesale beans</h3>
+          <p>Cafes, offices and shops across Leeds, roasted Thursday and delivered Friday. Bags, grind and dial in included, no contract to sign.</p>
+          <a class="btn primary-button" href="#visit" data-letters>Talk to us</a>
+        </div>
+        <img src="assets/events/wholesale.webp" alt="Bags of roasted coffee ready to go out" width="1400" height="933" loading="lazy">
+      </article>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit-section" id="visit" aria-label="Visit and book">
+    <div class="wrap">
+      <div class="visit-grid">
+
+        <div class="panel card shadow-xl reveal">
+          <div class="eyebrow card"><p>Reservations</p></div>
+          <h2>Save yourself a table</h2>
+          <p>Tables are first come most of the day. Booking matters for the back room, for groups over six, and for anything before nine on a Saturday.</p>
+
+          <form class="form" novalidate>
+            <div class="form__row">
+              <div>
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div>
+                <label for="f-people">How many</label>
+                <select id="f-people" name="people">
+                  <option>1 to 2</option>
+                  <option>3 to 4</option>
+                  <option>5 to 8</option>
+                  <option>9 or more</option>
+                </select>
+              </div>
+              <div>
+                <label for="f-when">When</label>
+                <input id="f-when" name="when" type="text" placeholder="Saturday, 10am" required>
+              </div>
+            </div>
+
+            <div>
+              <label for="f-note">Anything else</label>
+              <textarea id="f-note" name="note" placeholder="Dogs, prams, a laptop shift, the back room"></textarea>
+            </div>
+
+            <button class="primary-button" type="submit">Request a table</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="panel card shadow-xl reveal">
+          <div class="eyebrow card"><p>Find us</p></div>
+          <h2>Water Lane, Holbeck</h2>
+
+          <ul class="hours">
+            <li data-day="1"><span>Monday</span><span class="hours__leader"></span><span>7am to 6pm</span></li>
+            <li data-day="2"><span>Tuesday</span><span class="hours__leader"></span><span>7am to 6pm</span></li>
+            <li data-day="3"><span>Wednesday</span><span class="hours__leader"></span><span>7am to 6pm</span></li>
+            <li data-day="4"><span>Thursday</span><span class="hours__leader"></span><span>7am to 6pm</span></li>
+            <li data-day="5"><span>Friday</span><span class="hours__leader"></span><span>7am to 6pm</span></li>
+            <li data-day="6"><span>Saturday</span><span class="hours__leader"></span><span>8am to 6pm</span></li>
+            <li data-day="0"><span>Sunday</span><span class="hours__leader"></span><span>9am to 4pm</span></li>
+          </ul>
+
+          <div class="visit-facts">
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <div>
+                <h4>The shop</h4>
+                <p>Unit 4, Foundry Yard, Water Lane, Holbeck, Leeds LS11. Eight minutes on foot from Leeds station.</p>
+              </div>
+            </div>
+
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              </span>
+              <div>
+                <h4>Call the bar</h4>
+                <p><a href="tel:+441134960182">0113 496 0182</a>. Quickest way to hold a table today.</p>
+              </div>
+            </div>
+
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+              </span>
+              <div>
+                <h4>Roast day</h4>
+                <p>Thursday from 8am. Come and watch, the door stays open.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner wrap">
+    <h2 class="site-footer__wordmark" data-fit>Bean Scene</h2>
+
+    <div class="footer-cols">
+      <ul>
+        <li><a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>The board</a></li>
+        <li><a href="#menu" data-jump="espresso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Espresso bar</a></li>
+        <li><a href="#menu" data-jump="pastry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Bakes</a></li>
+      </ul>
+      <ul>
+        <li><a href="#roasts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>This week's roasts</a></li>
+        <li><a href="#hire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Hire the back room</a></li>
+        <li><a href="#hire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Wholesale</a></li>
+      </ul>
+      <ul>
+        <li><a href="#visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Opening hours</a></li>
+        <li><a href="#visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>Book a table</a></li>
+        <li><a href="tel:+441134960182"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>0113 496 0182</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-legal">Bean Scene, Water Lane, Holbeck, Leeds. Open seven days.<br></p>
+  </div>
+</footer>
+
+<script src="core/core.js"></script>
+<script src="site.js"></script>
+<script src="demo-site.js"></script>
+<script src="core/growth-kit.js" defer></script>
+</body>
+</html>

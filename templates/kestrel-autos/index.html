@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kestrel Autos: Independent Garage in Bristol</title>
+<meta name="description" content="Kestrel Autos, an independent garage in Bristol. Servicing, MOT, diagnostics and repairs on every make, priced before we start, with a video of anything we recommend.">
+<meta property="og:title" content="Kestrel Autos">
+<meta property="og:description" content="Main dealer standard, local garage bill. Servicing, MOT and repairs in Bristol.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-shop.webp">
+<meta name="theme-color" content="#151619">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=khand@500,600,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=kalam@400,700&display=swap">
+<link rel="stylesheet" href="./core/tokens.css">
+<link rel="stylesheet" href="./core/core.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="./core/growth-kit.css">
+</head>
+<body>
+
+<nav class="navbar navbar--bar" aria-label="Main">
+  <div class="navbar__panel" id="nav-panel">
+    <a href="#prices">Prices
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#services">Repairs
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#reviews">Reviews
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <a href="#contact">Book in
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </div>
+
+  <div class="navbar__bar">
+    <a class="navbar__brand" href="#top">Kestrel</a>
+
+    <div class="navbar__links">
+      <a href="#prices">Prices</a>
+      <a href="#services">Repairs</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Book in</a>
+    </div>
+
+    <div class="navbar__actions">
+      <a class="btn btn--arrow primary-button" href="#contact" data-open-quote>
+        <span class="btn__label">Book a service</span>
+        <span class="btn__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero section">
+    <video class="hero__bg" autoplay muted loop playsinline preload="metadata" poster="assets/hero-shop.webp" aria-hidden="true">
+      <source src="assets/hero-shop.mp4" type="video/mp4">
+    </video>
+
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="hero__kicker"><span>Independent garage</span><span>Bristol since 2002</span></p>
+        <h1 class="hero__title">Main dealer standard. Local garage bill.</h1>
+        <p class="hero__lede">Servicing, MOTs, diagnostics and repairs on every make, with dealer level kit and manufacturer parts. You get the price before we pick up a spanner, and a video of anything we recommend.</p>
+      </div>
+
+      <form class="reg-box" data-reg-box novalidate>
+        <p class="reg-box__title">Price your car</p>
+        <label class="plate">
+          <span class="plate__band" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><g fill="#F6CD1B"><circle cx="12" cy="4" r="1.3"/><circle cx="16" cy="5.1" r="1.3"/><circle cx="18.9" cy="8" r="1.3"/><circle cx="20" cy="12" r="1.3"/><circle cx="18.9" cy="16" r="1.3"/><circle cx="16" cy="18.9" r="1.3"/><circle cx="12" cy="20" r="1.3"/><circle cx="8" cy="18.9" r="1.3"/><circle cx="5.1" cy="16" r="1.3"/><circle cx="4" cy="12" r="1.3"/><circle cx="5.1" cy="8" r="1.3"/><circle cx="8" cy="5.1" r="1.3"/></g></svg>
+            UK
+          </span>
+          <input name="reg" type="text" placeholder="ENTER REG" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Your registration number">
+        </label>
+        <div class="reg-box__row">
+          <select name="job" aria-label="What does the car need?">
+            <option>Service</option>
+            <option>MOT</option>
+            <option>Warning light or diagnostics</option>
+            <option>Brakes</option>
+            <option>Clutch or gearbox</option>
+            <option>EV or hybrid</option>
+          </select>
+          <button class="btn primary-button" type="submit">Get my price</button>
+        </div>
+        <p class="reg-box__note">A fixed price by phone, usually within the hour.</p>
+      </form>
+    </div>
+
+    <!-- Enquiry form. Floats over the cover and takes no space in the
+         layout, so the design underneath is never pushed around. -->
+    <div data-growth-form="right"></div>
+  </section>
+
+  <!-- Trust row -->
+  <section class="trust-row" aria-label="Why drivers trust us">
+    <div class="wrap trust-row__inner">
+      <p><strong>Every make</strong>Petrol, diesel, hybrid, electric</p>
+      <p><strong>Warranty safe</strong>Manufacturer parts, book stamped</p>
+      <p><strong>Video first</strong>You see it before we fix it</p>
+      <p><strong>Free collection</strong>Within five miles of the garage</p>
+      <p><strong>12 months</strong>Parts and labour guarantee</p>
+    </div>
+  </section>
+
+  <!-- Prices: the job card -->
+  <section class="section" id="prices" aria-label="Service prices">
+    <div class="wrap prices">
+      <div class="prices__copy reveal">
+        <p class="kicker">Service prices</p>
+        <h2>Every car leaves with one of these</h2>
+        <p>The job card lists what we checked, what we changed and what we noticed. Tick boxes, not guesswork, and the price at the bottom is the price you pay.</p>
+
+        <div class="mot-box">
+          <div>
+            <p class="mot-box__label">MOT</p>
+            <p class="mot-box__price">£45</p>
+          </div>
+          <p>Tested in our own bay while you wait. The retest is free if we do the work within ten working days.</p>
+        </div>
+
+        <a class="btn btn--arrow primary-button" href="#contact" data-open-quote>
+          <span class="btn__label">Book a service</span>
+          <span class="btn__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="board reveal">
+        <img class="board__wall" src="assets/job-wall.webp" alt="" loading="lazy" width="1600" height="1066">
+        <div class="job-card" role="img" aria-label="A Kestrel Autos job card comparing interim, full and major services">
+          <span class="job-card__clip" aria-hidden="true"></span>
+          <div class="job-card__head">
+            <p class="job-card__brand">Kestrel Autos<small>Bristol · 0117 496 0145</small></p>
+            <p class="job-card__no">Job card<b>No. 04817</b></p>
+          </div>
+          <div class="job-card__fields">
+            <p><span>Reg</span><em>KE57 REL</em></p>
+            <p><span>Mileage</span><em>42,180</em></p>
+            <p><span>Date</span><em>12 / 09</em></p>
+          </div>
+          <table class="job-card__table">
+            <thead>
+              <tr><th>Work carried out</th><th>Interim</th><th>Full</th><th>Major</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Oil and filter change</td><td class="t"></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Brakes, tyres, lights, wipers</td><td class="t"></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Fluids checked and topped up</td><td class="t"></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Air filter</td><td></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Brake fluid tested</td><td></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Coolant strength and hoses</td><td></td><td class="t"></td><td class="t"></td></tr>
+              <tr><td>Cabin pollen filter</td><td></td><td></td><td class="t"></td></tr>
+              <tr><td>Spark plugs or fuel filter</td><td></td><td></td><td class="t"></td></tr>
+              <tr><td>Road test and video report</td><td class="t"></td><td class="t"></td><td class="t"></td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td>Price, parts and VAT</td><td>£129</td><td>£219</td><td>£319</td></tr>
+            </tfoot>
+          </table>
+          <p class="job-card__note"><span>Notes</span><em>Front pads at 3mm, video sent. Advised, not urgent. JK</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repairs -->
+  <section class="section section--tight" id="services" aria-label="Repairs">
+    <div class="wrap stack">
+      <div class="section-head section-head--left reveal">
+        <p class="kicker">Repairs</p>
+        <h2>Four bays. Every make.</h2>
+        <p>Same diagnostic kit as the dealer, manufacturer parts, and one of us calls you before anything goes on the bill.</p>
+      </div>
+
+      <div class="repairs reveal-stagger">
+        <article class="repair">
+          <img src="assets/svc-service.webp" alt="A mechanic working in an open engine bay" loading="lazy" width="1100" height="733">
+          <div class="repair__body"><h3>Servicing</h3><p>Manufacturer schedule, book stamped, warranty kept.</p><span>From £129</span></div>
+        </article>
+        <article class="repair">
+          <img src="assets/svc-mot.webp" alt="A mechanic checking the underside of a car with a torch" loading="lazy" width="1100" height="733">
+          <div class="repair__body"><h3>MOT</h3><p>Our own bay, and the retest is free if we fix it.</p><span>£45</span></div>
+        </article>
+        <article class="repair">
+          <img src="assets/svc-diag.webp" alt="A diagnostic tablet plugged into a car" loading="lazy" width="1100" height="733">
+          <div class="repair__body"><h3>Warning lights</h3><p>Read, traced to the cause and shown to you before we fix it.</p><span>£60, off the repair</span></div>
+        </article>
+        <article class="repair">
+          <img src="assets/svc-brakes.webp" alt="A mechanic fitting a brake caliper over a new disc" loading="lazy" width="1100" height="733">
+          <div class="repair__body"><h3>Brakes</h3><p>Pads and discs, measured and photographed first.</p><span>From £120 an axle</span></div>
+        </article>
+        <article class="repair">
+          <img src="assets/feature2.webp" alt="A mechanic writing up a job sheet by an orange car" loading="lazy" width="1000" height="666">
+          <div class="repair__body"><h3>Clutches and gearboxes</h3><p>Same part numbers as the dealer, most done in a day.</p><span>From £495</span></div>
+        </article>
+        <article class="repair">
+          <img src="assets/svc-ev.webp" alt="A technician with a diagnostic tablet at an open bonnet" loading="lazy" width="1100" height="733">
+          <div class="repair__body"><h3>Hybrid and electric</h3><p>Two of us are qualified for high voltage systems.</p><span>From £149</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="section" id="video" aria-label="Video health check">
+    <div class="wrap video-check">
+      <div class="video-check__media reveal">
+        <video autoplay muted loop playsinline preload="none" poster="assets/cta-poster.webp" aria-hidden="true">
+          <source src="assets/cta-video.mp4" type="video/mp4">
+        </video>
+        <div class="text-msg">
+          <p class="text-msg__from">Kestrel Autos<span>10:42</span></p>
+          <p>Tom, the front pads are at 3mm. Video attached. £120 fitted today, or leave it until the next service. Jon</p>
+        </div>
+      </div>
+      <div class="video-check__copy reveal">
+        <p class="kicker">Before we fix anything</p>
+        <h2>You see what we see</h2>
+        <p>Anything we recommend comes to your phone as a video from under the car, with a price and an honest answer to "can it wait?". Old parts go in a box in your boot, so you can check them yourself.</p>
+        <div class="compare-mini">
+          <div class="compare-mini__col">
+            <h3>The main dealer way</h3>
+            <ul>
+              <li>Labour at 180 pounds an hour</li>
+              <li>You speak to a service desk</li>
+              <li>Booked in two weeks out</li>
+              <li>Old parts binned before you see them</li>
+            </ul>
+          </div>
+          <div class="compare-mini__col compare-mini__col--good">
+            <h3>The Kestrel way</h3>
+            <ul>
+              <li>Labour at 85 pounds an hour</li>
+              <li>The mechanic calls you, with a video</li>
+              <li>Most bookings the same week</li>
+              <li>Old parts in a box in your boot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--dark" id="reviews" aria-label="Testimonials section">
+    <div class="wrap reviews">
+      <figure class="reviews__lead reveal">
+        <p class="kicker">What Bristol says</p>
+        <blockquote>"The dealer quoted me eleven hundred pounds for a clutch. Kestrel did it for six fifty with the same part number, sent me a video of the old one and had it back to me by four."</blockquote>
+        <figcaption>
+          <img src="assets/person1.webp" alt="" loading="lazy" width="220" height="220">
+          <span><strong>Tom Hollis</strong>Bedminster</span>
+        </figcaption>
+      </figure>
+
+      <div class="reviews__grid reveal-stagger">
+        <article class="rv">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+          <p>The engine light came on the week before a holiday. They found a failing coil pack in twenty minutes, fitted it the same afternoon, and showed me the reading before and after.</p>
+          <p class="rv__who"><img src="assets/person2.webp" alt="" loading="lazy" width="220" height="220"><span><strong>Sophie Grant</strong>Clifton</span></p>
+        </article>
+        <article class="rv">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+          <p>They told me my brakes had another five thousand miles in them when the chain across town wanted to replace them. That honesty is why every car in our family goes there now.</p>
+          <p class="rv__who"><img src="assets/person3.webp" alt="" loading="lazy" width="220" height="220"><span><strong>Dev Patel</strong>Southville</span></p>
+        </article>
+        <article class="rv">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+          <p>Collected from my office at nine, serviced, MOT passed and back in the car park at three. The service book was stamped and the invoice matched the quote to the penny.</p>
+          <p class="rv__who"><img src="assets/person4.webp" alt="" loading="lazy" width="220" height="220"><span><strong>Hannah Lowe</strong>Temple Quay</span></p>
+        </article>
+        <article class="rv">
+          <div class="stars" aria-label="Five stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+          <p>Eight years and three cars with them. Same mechanic every time, same honest answer about what actually needs doing, and nothing is ever done without a call first.</p>
+          <p class="rv__who"><img src="assets/person5.webp" alt="" loading="lazy" width="220" height="220"><span><strong>Martin Cole</strong>Nailsea</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" id="team" aria-label="Team section">
+    <div class="wrap stack">
+      <div class="section-head section-head--left reveal">
+        <p class="kicker">Who works on your car</p>
+        <h2>Three names. No service desk.</h2>
+        <p>The person who diagnoses your car is the person who fixes it, and the one who calls you about it.</p>
+      </div>
+
+      <div class="team reveal-stagger">
+        <article class="mechanic">
+          <img src="assets/team1.webp" alt="Jon Kestrel, owner, arms folded in the workshop" loading="lazy" width="800" height="534">
+          <div class="mechanic__tag"><h3>Jon Kestrel</h3><p>Owner, master technician, 24 years</p></div>
+        </article>
+        <article class="mechanic">
+          <img src="assets/team-rob.webp" alt="Rob Hale in overalls and a flat cap at the workbench" loading="lazy" width="867" height="1300">
+          <div class="mechanic__tag"><h3>Rob Hale</h3><p>MOT tester, diagnostics and electrics</p></div>
+        </article>
+        <article class="mechanic">
+          <img src="assets/team-sam.webp" alt="Sam Price with a tyre on the workshop floor" loading="lazy" width="867" height="1300">
+          <div class="mechanic__tag"><h3>Sam Price</h3><p>Tyres, brakes and suspension</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-label="FAQ section">
+    <div class="wrap faq">
+      <div class="faq__intro reveal">
+        <p class="kicker">Before you book</p>
+        <h2>The questions we get at the counter</h2>
+        <a class="btn btn--arrow secondary-button" href="tel:+441174960145">
+          <span class="btn__label">Call the workshop</span>
+          <span class="btn__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="accordion reveal" data-accordion>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button">
+            <h3>Will a service here affect my warranty?</h3>
+            <span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="accordion__panel"><div><p>No. UK law lets you service a car under warranty at any garage, as long as the manufacturer schedule is followed and the right parts are used. We do both and stamp the book.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button">
+            <h3>How long does a service take?</h3>
+            <span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="accordion__panel"><div><p>An interim service is about ninety minutes and a full service two to three hours. Drop off in the morning and it is almost always ready the same afternoon.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button">
+            <h3>Do you work on electric and hybrid cars?</h3>
+            <span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="accordion__panel"><div><p>Yes. Two of us are qualified for high voltage systems, and we service, diagnose and repair hybrids and electric cars from most makers.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button">
+            <h3>Do you do courtesy cars?</h3>
+            <span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="accordion__panel"><div><p>We have two, booked on a first come basis, and free collection and delivery within five miles of the garage if you would rather not come in at all.</p></div></div>
+        </div>
+        <div class="accordion__item" data-open="false">
+          <button class="accordion__trigger" type="button">
+            <h3>What does it cost?</h3>
+            <span class="badge-num" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="accordion__panel"><div><p>An interim service starts at 129 pounds, a full service at 219 and an MOT is 45. Diagnostics are 60 pounds, taken off the bill if we do the repair. Every price is confirmed before we start.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-label="Contact section">
+    <div class="wrap contact">
+      <div class="contact__panel reveal">
+        <p class="kicker">Book the car in</p>
+        <h2>Reg, mileage, what it is doing</h2>
+        <p>We come back with a fixed price and the earliest slot, usually the same week.</p>
+        <form class="form" data-form>
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required>
+          <input type="email" name="email" placeholder="Email address" autocomplete="email">
+          <textarea name="message" placeholder="Reg, mileage and what the car is doing" required></textarea>
+          <button class="primary-button" type="submit">Get my price</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="contact__media reveal">
+        <img src="assets/contact.webp" alt="A mechanic working under a car raised on a red lift" loading="lazy" width="1400" height="933">
+        <dl class="contact__hours">
+          <div><dt>Monday to Friday</dt><dd>8am to 6pm</dd></div>
+          <div><dt>Saturday</dt><dd>8am to 1pm</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+441174960145">Call us</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Kestrel Autos</p>
+        <p class="footer-plate" aria-hidden="true">KE57 REL</p>
+      </div>
+
+      <div class="footer-nav">
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#prices">Servicing and MOT</a></li>
+            <li><a href="#services">Diagnostics</a></li>
+            <li><a href="#services">Brakes and clutches</a></li>
+            <li><a href="#services">Hybrid and electric</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Garage</h3>
+          <ul>
+            <li><a href="#team">Our team</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Book in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+441174960145">0117 496 0145</a></li>
+            <li><a href="mailto:hello@kestrelautos.co.uk">hello@kestrelautos.co.uk</a></li>
+            <li><a href="#contact">Bristol, BS3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal-bar">
+      <span>© 2026 Kestrel Autos</span>
+      <div>
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./core/core.js"></script>
+<script>/* optional: your own Supabase anon key, only for ?site= preview links. Leave it empty for a client site. */
+window.GK_STORE_KEY = "";</script>
+<script src="demo-site.js"></script>
+<script src="./core/growth-kit.js" defer></script>
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-open-quote]');
+    if (!link || typeof window.gkOpenForm !== 'function') return;
+    event.preventDefault();
+    window.gkOpenForm();
+  });
+
+  /* When a browser refuses autoplay (iOS Low Power Mode does), each clip is
+     swapped for its own poster so no play button ever sits over the page. */
+  document.querySelectorAll('video[autoplay]').forEach(function (video) {
+    var attempt = video.play();
+    if (!attempt || typeof attempt.catch !== 'function') return;
+    attempt.catch(function (error) {
+      if (error && error.name === 'AbortError') return;
+      var still = document.createElement('img');
+      still.src = video.getAttribute('poster');
+      still.alt = '';
+      still.className = video.className;
+      still.setAttribute('aria-hidden', 'true');
+      video.replaceWith(still);
+    });
+  });
+
+  /* The number plate box hands the reg and the job to the quote form, so the
+     visitor is not asked for them twice. */
+  (function () {
+    var box = document.querySelector('[data-reg-box]');
+    if (!box) return;
+    var reg = box.querySelector('[name="reg"]');
+    reg.addEventListener('input', function () {
+      reg.value = reg.value.toUpperCase().replace(/[^A-Z0-9 ]/g, '');
+    });
+    box.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (typeof window.gkOpenForm !== 'function') return;
+      window.gkOpenForm();
+      var form = document.querySelector('.gk-form');
+      if (!form) return;
+      var job = box.querySelector('[name="job"]').value;
+      var service = form.querySelector('[name="service"]');
+      if (service) {
+        Array.prototype.forEach.call(service.options, function (option) {
+          if (option.text === job) service.value = option.value || option.text;
+        });
+      }
+      var regField = form.querySelector('[name="q1"]');
+      if (regField && reg.value.trim()) regField.value = reg.value.trim();
+    });
+  })();
+</script>
+</body>
+</html>

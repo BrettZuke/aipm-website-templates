@@ -1,0 +1,236 @@
+/* ==========================================================================
+   RIDGEWAY ROOF CARE
+   Moss dark and chalk lime: full-bleed hero over a growing roof, static trust
+   strip, service grid, before and after grid, single quote, team, FAQ, form.
+   ========================================================================== */
+
+:root {
+  --background: #0F1811;
+  --card: #17231A;
+  --foreground: #E8EFE7;
+  --primary-cta: #CDE04A;
+  --primary-cta-text: #13210F;
+  --secondary-cta: #1E2C21;
+  --secondary-cta-text: #E8EFE7;
+  --accent: #CDE04A;
+  --background-accent: #3F6B36;
+  --radius: 1.25rem;
+  --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Ranade', 'Satoshi', -apple-system, sans-serif;
+  --content-width: 87.5vw;
+  --section-head-size: var(--text-6xl);
+  --nav-ink: #ffffff;
+  --nav-ink-scrolled: var(--foreground);
+}
+
+@media (width >= 1536px) { :root { --section-head-size: var(--text-7xl); } }
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 42rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg, rgba(15, 24, 17, 0.92) 0%, rgba(15, 24, 17, 0.62) 48%, rgba(15, 24, 17, 0.25) 78%),
+    linear-gradient(to top, var(--background) 1%, transparent 26%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.15rem;
+  color: #fff;
+}
+
+.hero__inner .eyebrow { background: rgba(255,255,255,0.9); color: var(--foreground); border: 0; }
+
+.hero__title {
+  max-width: 13ch;
+  font-size: var(--text-8xl);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero__lede { max-width: 46ch; font-size: var(--text-xl); line-height: 1.45; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.hero .avatar-stack__row img { border-color: rgba(255,255,255,0.6); }
+.hero .avatar-stack p { font-size: var(--text-base); font-weight: 600; }
+
+.hero__trust {
+  position: absolute;
+  z-index: 2;
+  bottom: 2.5rem;
+  left: 0; right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-inline: 6vw;
+}
+
+.hero__trust .trust-pill {
+  gap: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.14);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.hero__trust svg { width: 1rem; height: 1rem; flex: none; }
+
+@media (width <= 768px) {
+  .hero { margin-bottom: 3rem; }
+  .hero__title { font-size: var(--text-7xl); max-width: 11ch; }
+  /* The strip is absolutely positioned at the bottom of a fixed height hero.
+     Once the pills wrap onto four or five rows it grows upward through the
+     buttons and the avatar row, so on a phone it comes out of the flow entirely
+     and the hero is allowed to grow instead of clipping. */
+  .hero { height: auto; min-height: 100svh; justify-content: flex-start; padding-block: 7.5rem 3rem; }
+  .hero__trust { position: static; margin-top: 1.75rem; padding-inline: 0; }
+}
+
+/* --- Treatments ------------------------------------------------------------- */
+
+.treatment-card { padding: 0.75rem; border-radius: var(--radius); }
+
+.treatment-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 0.5rem);
+  transition: transform 0.5s ease-out;
+}
+
+.treatment-card:hover img { transform: scale(1.04); }
+.treatment-card__body { padding: 1.15rem 0.6rem 0.4rem; }
+.treatment-card__body h3 { font-size: var(--text-3xl); margin-bottom: 0.25rem; }
+.treatment-card__body p { font-size: var(--text-lg); opacity: 0.75; }
+
+/* --- Results marquee --------------------------------------------------------- */
+
+.results-marquee { --marquee-gap: 1rem; --marquee-duration: 60s; }
+.results-marquee .ba-card { width: 22rem; flex: none; }
+
+@media (width <= 768px) { .results-marquee .ba-card { width: 17rem; } }
+
+/* --- Single quote ------------------------------------------------------------- */
+
+.quote-band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3.5rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.quote-band blockquote {
+  max-width: 34ch;
+  margin: 0;
+  font-size: var(--text-4xl);
+  line-height: 1.3;
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+.quote-band cite { font-size: var(--text-lg); font-style: normal; opacity: 0.7; }
+.quote-band .avatar-stack { justify-content: center; }
+
+/* --- Contact ------------------------------------------------------------------- */
+
+.contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
+
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.contact-panel h2 { font-size: var(--text-6xl); line-height: 1.1; }
+.contact-panel > p { max-width: 36ch; font-size: var(--text-lg); line-height: 1.45; margin-bottom: 0.75rem; }
+
+.contact-grid__media { border-radius: var(--radius); overflow: hidden; }
+.contact-grid__media img { width: 100%; height: 100%; min-height: 22rem; object-fit: cover; }
+
+@media (width <= 900px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-panel { padding: 1.5rem; }
+  .contact-grid__media img { min-height: 16rem; }
+}
+
+/* --- Footer --------------------------------------------------------------------- */
+
+/* The template footer inverted to the foreground colour, which on a dark
+   palette leaves white on near-white. It gets its own dark surface instead. */
+.site-footer { border-radius: var(--radius) var(--radius) 0 0; background: #0A110C; color: var(--foreground); padding-block: 4rem; border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent); }
+.footer-top { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+.footer-brand { font-size: var(--text-5xl); font-weight: 700; letter-spacing: -0.02em; }
+.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(9rem, auto)); gap: 2.5rem; }
+.footer-nav h3 { font-size: var(--text-base); font-weight: 500; opacity: 0.55; margin-bottom: 1rem; }
+.footer-nav ul { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-nav a { font-size: var(--text-lg); transition: color 0.2s; }
+.footer-nav a:hover { color: var(--accent); }
+
+.footer-legal-bar {
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  margin-top: 3rem; padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: var(--text-base); opacity: 0.65;
+}
+.footer-legal-bar div { display: flex; gap: 1.25rem; }
+
+@media (width <= 768px) {
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+
+
+/* --- Results grid ------------------------------------------------------------
+   The template scrolled these before and after cards. Nothing here moves on
+   its own, so they sit in a grid the reader scans at their own pace. --- */
+
+.results-grid { overflow: visible; }
+
+.results-grid__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: var(--content-width);
+  margin-inline: auto;
+}
+
+.results-grid__inner .ba-card { width: auto; flex: initial; }
+
+@media (width <= 1100px) { .results-grid__inner { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (width <= 680px) { .results-grid__inner { grid-template-columns: minmax(0,1fr); } }
+
+/* Hero legibility pass 2026-09-21: on a phone the copy spans the full width,
+   so the left-to-right scrim left the intro at 3.1:1. */
+@media (width <= 768px) {
+  .hero::after { background: linear-gradient(to bottom, rgba(15, 24, 17, 0.88) 0%, rgba(15, 24, 17, 0.8) 60%, rgba(15, 24, 17, 0.92) 100%); }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bramble Paws: Dog Grooming in Sheffield</title>
+<meta name="description" content="A one dog at a time grooming salon on Abbeydale Road. No cages, no waiting around, and the same groomer every visit.">
+<meta property="og:title" content="Bramble Paws">
+<meta property="og:description" content="A one dog at a time grooming salon on Abbeydale Road in Sheffield. No cages, no waiting around.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.webp">
+<meta name="theme-color" content="#f5f3f0">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=melodrama@400,500,600,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,700&display=swap">
+<link rel="stylesheet" href="./core/tokens.css">
+<link rel="stylesheet" href="./core/core.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="./core/growth-kit.css">
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+
+<nav class="navbar navbar--bar" aria-label="Main">
+  <div class="navbar__panel" id="nav-panel">
+    <a href="#about">How we work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a href="#gallery">Recent grooms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a href="#gallery">Prices <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a href="#contact">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
+  <div class="navbar__bar card">
+    <a class="navbar__brand" href="#top">Bramble Paws</a>
+    <div class="navbar__links">
+      <a href="#about">How we work</a>
+      <a href="#gallery">Recent grooms</a>
+      <a href="#gallery">Prices</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navbar__actions">
+      <a class="btn btn--arrow primary-button" href="#contact"><span class="btn__label">Book a groom</span><span class="btn__icon secondary-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <button class="navbar__toggle card" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu"><svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="hero" aria-label="Hero section">
+    <img class="sticker" src="assets/st-1.webp" alt="" loading="lazy" width="340" height="511">
+    <img class="sticker" src="assets/st-2.webp" alt="" loading="lazy" width="340" height="510">
+    <img class="sticker" src="assets/st-3.webp" alt="" loading="lazy" width="340" height="227">
+    <img class="sticker" src="assets/st-4.webp" alt="" loading="lazy" width="340" height="227">
+    <img class="sticker" src="assets/st-5.webp" alt="" loading="lazy" width="340" height="227">
+    <img class="sticker" src="assets/st-6.webp" alt="" loading="lazy" width="340" height="227">
+    <img class="sticker" src="assets/st-7.webp" alt="" loading="lazy" width="340" height="226">
+    <img class="sticker" src="assets/st-8.webp" alt="" loading="lazy" width="340" height="255">
+    <div class="wrap hero__inner">
+      <p class="hero__hint">Give them a poke</p>
+      <img class="hero__photo card shadow-xl" src="assets/hero.webp" alt="A shiba inu grinning in the salon bath" width="900" height="600">
+      <p class="hero__lede">A small salon on Abbeydale Road where yours is the only dog in the room. One at a time, never a cage, and the same groomer every visit.</p>
+      <h1 class="hero__name">Bramble Paws</h1>
+      <p class="hero__role">Dog grooming in Sheffield</p>
+    </div>
+  
+    <!-- Enquiry form. Floats over the cover and takes no space in the
+         layout, so the design underneath is never pushed around. -->
+    <div data-growth-form="right"></div>
+  </section>
+
+  <section class="section" id="about" aria-label="About section">
+    <div class="wrap stack">
+      <div class="section-head reveal">
+        <div class="eyebrow card"><p>How we work</p></div>
+        <h2>One dog in the salon at a time</h2>
+        <p>Most dogs are in and out inside two hours, awake, dry and back to you the same morning.</p>
+      </div>
+      <div class="bento reveal-stagger">
+        <article class="bento__cell card shadow-xl">
+          <img src="assets/svc-onedog.webp" alt="A groomer scissoring a small dog on the table" loading="lazy" width="900" height="601">
+          <div class="bento__body"><h3>No cages, ever</h3><p>Your dog is the only one booked in. Nothing waits in a crate for the van to fill up.</p></div>
+        </article>
+        <article class="bento__cell card shadow-xl">
+          <img src="assets/svc-deshed.webp" alt="A deshedding brush working through a thick coat" loading="lazy" width="900" height="600">
+          <div class="bento__body"><h3>Deshedding and matting</h3><p>Double coats blown out properly. Matted coats come out humanely, and we tell you honestly if it has to come off.</p></div>
+        </article>
+        <article class="bento__cell card shadow-xl">
+          <img src="assets/svc-bath.webp" alt="A small dog being washed in the salon bath" loading="lazy" width="900" height="601">
+          <div class="bento__body"><h3>Bath, blow dry, finish</h3><p>Warm water, a hypoallergenic wash and a hand dry. No cage dryer left running while someone else gets seen to.</p></div>
+        </article>
+        <article class="bento__cell card shadow-xl">
+          <img src="assets/svc-breedcut.webp" alt="A yorkshire terrier having its coat scissored" loading="lazy" width="900" height="600">
+          <div class="bento__body"><h3>Breed cuts, done right</h3><p>Schnauzer, cocker, doodle, westie. Tell us the finish you want and we will tell you what the coat will actually hold.</p></div>
+        </article>
+      </div>
+      <div style="display:flex;justify-content:center"><a class="btn btn--arrow primary-button" href="#contact"><span class="btn__label">Book a groom</span><span class="btn__icon secondary-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery" aria-label="Gallery section">
+    <div class="wrap stack">
+      <div class="section-head reveal">
+        <div class="eyebrow card"><p>Fresh out</p></div>
+        <h2>Dogs who went home last week</h2>
+        <p>Every one of them walked in, stood for the dryer and walked out. Ask for their groomer by name next time.</p>
+      </div>
+    </div>
+    <div class="wrap"><div class="memory-grid">
+          <figure class="memory card shadow-xl" style="margin:0">
+            <img src="assets/groom-milo.webp" alt="A shih tzu freshly groomed on the table" loading="lazy" width="700" height="467"><p>Milo, shih tzu</p>
+          </figure>
+          <figure class="memory card shadow-xl" style="margin:0">
+            <img src="assets/groom-nala.webp" alt="A lhasa apso running across grass after a groom" loading="lazy" width="700" height="394"><p>Nala, lhasa apso</p>
+          </figure>
+          <figure class="memory card shadow-xl" style="margin:0">
+            <img src="assets/groom-bertie.webp" alt="A cocker spaniel having its ears tidied" loading="lazy" width="700" height="467"><p>Bertie, cocker spaniel</p>
+          </figure>
+          <figure class="memory card shadow-xl" style="margin:0">
+            <img src="assets/groom-suki.webp" alt="A pomeranian standing outside after a full groom" loading="lazy" width="700" height="467"><p>Suki, pomeranian</p>
+          </figure>
+          <figure class="memory card shadow-xl" style="margin:0">
+            <img src="assets/groom-otis.webp" alt="A golden retriever after a full groom" loading="lazy" width="700" height="1050"><p>Otis, golden retriever</p>
+          </figure>
+      </div></div>
+    <div class="wrap" style="display:flex;justify-content:center;gap:0.75rem;margin-top:2.5rem;flex-wrap:wrap">
+      <a class="btn btn--arrow primary-button" href="#contact"><span class="btn__label">Book a groom</span><span class="btn__icon secondary-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="btn btn--arrow secondary-button" href="#contact"><span class="btn__label">Prices and breeds</span><span class="btn__icon primary-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-label="Showcase section">
+    <div class="wrap">
+      <div class="parallax reveal">
+        <img class="parallax__bg" src="assets/parallax-bg.webp" alt="" loading="lazy" width="1600" height="1200">
+        <img class="parallax__float parallax__float--a" src="assets/float-a.webp" alt="" loading="lazy" width="420" height="420">
+        <img class="parallax__float parallax__float--b" src="assets/float-b.webp" alt="" loading="lazy" width="420" height="280">
+        <h2>Bring us a scruffy one</h2>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-brand">Bramble Paws</p>
+      <div class="footer-nav">
+        <div><h3>Follow</h3><ul>
+          <li><a href="#gallery">Instagram</a></li>
+          <li><a href="#gallery">Facebook</a></li>
+          <li><a href="#contact">WhatsApp</a></li>
+        </ul></div>
+        <div><h3>The salon</h3><ul>
+          <li><a href="#gallery">Prices</a></li>
+          <li><a href="#gallery">Recent grooms</a></li>
+          <li><a href="#about">How we work</a></li>
+        </ul></div>
+        <div><h3>Visit</h3><ul>
+          <li><a href="#contact">Abbeydale Road, Sheffield</a></li>
+          <li><a href="#contact">Book a groom</a></li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="footer-legal-bar">
+      <span>&copy; 2026 Bramble Paws, Sheffield. Tuesday to Saturday, 8am to 4pm.</span>
+      <div><a href="#contact">Cancellations</a><a href="#contact">What to bring</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="./core/core.js"></script>
+<script>/* optional: your own Supabase anon key, only for ?site= preview links. Leave it empty for a client site. */
+window.GK_STORE_KEY = "";</script>
+<script src="demo-site.js"></script>
+<script src="./core/growth-kit.js" defer></script>
+</body>
+</html>

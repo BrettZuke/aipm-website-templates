@@ -1,0 +1,298 @@
+/* ==========================================================================
+   NORTHWIND SNOW
+   Bright winter: icy white ground, deep navy ink and plow orange for the
+   buttons. Full-bleed plow hero with falling snow, static trust strip,
+   service cards, reviews, reason cards, FAQ, contact form.
+   ========================================================================== */
+
+:root {
+  --background: #F1F5F9;
+  --card: #FFFFFF;
+  --foreground: #0E2236;
+  --primary-cta: #C4490D;
+  --primary-cta-text: #FFFFFF;
+  --secondary-cta: #FFFFFF;
+  --secondary-cta-text: #0E2236;
+  --accent: #2B6A9E;
+  --background-accent: #D6E4F0;
+  --radius: 1.5rem;
+  --font-body: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Clash Display', 'General Sans', -apple-system, sans-serif;
+  --content-width: 87.5vw;
+  --section-head-size: var(--text-6xl);
+}
+
+@media (width >= 1536px) {
+  :root { --section-head-size: var(--text-7xl); }
+}
+
+/* Cards read like packed snow: white, a cold hairline, a soft blue shadow. */
+.card {
+  background: var(--card);
+  border: 1px solid #DDE6EF;
+}
+.shadow-xl { box-shadow: 0 1px 2px rgba(14, 34, 54, 0.04), 0 14px 32px -18px rgba(14, 34, 54, 0.22); }
+
+/* Headings stay one solid navy; the fade into a second colour is off here. */
+.section-head h2,
+.grad-head { background: none; color: var(--foreground); }
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(241, 245, 249, 0.9) 0%, rgba(241, 245, 249, 0.72) 42%, rgba(241, 245, 249, 0.15) 78%),
+    linear-gradient(to top, var(--background) 3%, transparent 34%);
+}
+
+/* Falling snow over the hero photo only. Two tiled layers drift down at
+   different speeds; each moves exactly one tile height per loop so the
+   repeat is seamless, and it runs on transform so it stays off the main
+   thread. White flakes only read against the photo, which is why it stops
+   at the hero rather than covering the page. */
+.snowfall { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+.snowfall::before,
+.snowfall::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform;
+}
+.snowfall::before {
+  top: -320px;
+  background-image:
+    radial-gradient(circle at 24px 36px, rgba(255,255,255,0.95) 0 1.6px, transparent 2.2px),
+    radial-gradient(circle at 118px 92px, rgba(255,255,255,0.85) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 196px 18px, rgba(255,255,255,0.9) 0 1.8px, transparent 2.4px),
+    radial-gradient(circle at 70px 188px, rgba(255,255,255,0.8) 0 1.3px, transparent 1.9px),
+    radial-gradient(circle at 164px 236px, rgba(255,255,255,0.9) 0 1.6px, transparent 2.2px),
+    radial-gradient(circle at 36px 284px, rgba(255,255,255,0.85) 0 1.4px, transparent 2px);
+  background-size: 220px 320px;
+  animation: nw-snow-a 16s linear infinite;
+}
+.snowfall::after {
+  top: -440px;
+  background-image:
+    radial-gradient(circle at 60px 80px, rgba(255,255,255,0.95) 0 2.6px, transparent 3.4px),
+    radial-gradient(circle at 250px 210px, rgba(255,255,255,0.9) 0 2.2px, transparent 3px),
+    radial-gradient(circle at 150px 360px, rgba(255,255,255,0.95) 0 2.8px, transparent 3.6px);
+  background-size: 320px 440px;
+  animation: nw-snow-b 11s linear infinite;
+  filter: drop-shadow(0 0 1px rgba(14, 34, 54, 0.25));
+}
+@keyframes nw-snow-a { to { transform: translateY(320px); } }
+@keyframes nw-snow-b { to { transform: translateY(440px); } }
+@media (prefers-reduced-motion: reduce) {
+  .snowfall::before, .snowfall::after { animation: none; }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 30ch; /* the headline sits on one line at desktop */
+  font-size: var(--text-8xl);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero__lede {
+  max-width: 52ch;
+  font-size: var(--text-xl);
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--foreground) 85%, transparent);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.hero .avatar-stack { justify-content: center; }
+.hero .avatar-stack__row img { border-color: #FFFFFF; }
+.hero .avatar-stack p { font-size: var(--text-base); font-weight: 600; }
+
+/* Trust strip pinned to the bottom of the hero. The template scrolled it;
+   here it sits still and wraps. */
+.hero__trust {
+  position: absolute;
+  z-index: 2;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  padding-inline: 6vw;
+}
+
+.hero__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.hero__trust .trust-pill {
+  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  background: color-mix(in srgb, var(--card) 70%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+@media (width <= 768px) {
+  /* On a phone the stacked copy is taller than the screen, so the hero grows
+     with it instead of centring it under the nav bar. */
+  .hero { margin-bottom: 3rem; height: auto; min-height: 100svh; justify-content: flex-start; padding-top: 7.5rem; padding-bottom: 2.5rem; }
+  .hero__title { font-size: var(--text-7xl); max-width: 16ch; }
+  .hero__trust { position: static; margin-top: 2rem; padding-inline: 0; }
+}
+
+/* --- Contact ------------------------------------------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.contact-panel h2 {
+  font-size: var(--text-6xl);
+  line-height: 1.1;
+}
+
+.contact-panel > p {
+  max-width: 34ch;
+  font-size: var(--text-lg);
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.contact-grid__media {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.contact-grid__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 22rem;
+  object-fit: cover;
+}
+
+@media (width <= 900px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-panel { padding: 1.5rem; }
+  .contact-grid__media img { min-height: 16rem; }
+}
+
+/* --- Footer -------------------------------------------------------------- */
+
+.site-footer {
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--card);
+  color: var(--foreground);
+  padding-block: 4rem;
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-brand {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(9rem, auto)); gap: 2.5rem; }
+
+.footer-nav h3 {
+  font-size: var(--text-base);
+  font-weight: 500;
+  opacity: 0.55;
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-nav a { font-size: var(--text-lg); transition: color 0.2s; }
+.footer-nav a:hover { color: var(--accent); }
+
+.footer-legal-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  font-size: var(--text-base);
+  opacity: 0.6;
+}
+
+.footer-legal-bar div { display: flex; gap: 1.25rem; }
+
+@media (width <= 768px) {
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+
+/* On a phone the copy runs down over the truck and the road, so the scrim
+   becomes a near-solid frost from the top and the lede drops its tint. */
+@media (width <= 768px) {
+  .hero::after {
+    background: linear-gradient(to bottom, rgba(241, 245, 249, 0.93) 0%, rgba(241, 245, 249, 0.88) 64%, rgba(241, 245, 249, 0.6) 86%, var(--background) 100%);
+  }
+  .hero__lede { color: var(--foreground); }
+}
+
+/* Footer labels and legal line pass 4.5:1 on the light ground. */
+.footer-nav h3,
+.footer-legal-bar { opacity: 1; color: #4B5B6C; }
