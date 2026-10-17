@@ -13,6 +13,14 @@ own contact form with no pop-up, on purpose: a sales form that jumps out at a gr
 would lose the client. Summit Roofing is the one exception to everything above: a compiled
 React app with its own chat, covered below.
 
+## Your own portfolio site
+
+`portfolio-templates/` has three styles for your own website: the one you link at the bottom
+of your outreach, so a business owner can check you're a real person. Each has book-a-call
+buttons, an about me section with your photo in a frame, and live previews of sites you've
+built. See them at https://aipm-portfolio-templates.vercel.app and follow
+`portfolio-templates/README.md` to make one yours.
+
 ## Start here
 
 0. Send the client the onboarding form the day they pay: see `onboarding/`. Two minutes to
